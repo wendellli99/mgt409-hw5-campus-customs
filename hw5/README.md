@@ -82,4 +82,4 @@ Money and reset tests use temporary database copies. The strict validator checks
 
 ## Publication
 
-Problem 11 requires a **public GitHub repository**, both databases, the repository URL in `output/github_url.txt`, and the URL submitted on Canvas. Publish only after reviewing the exact files and authorizing that external action. Local preparation and a working preview do not establish GitHub publication or Canvas submission.
+The homework is published in the **[public GitHub repository](https://github.com/wendellli99/mgt409-hw5-campus-customs)**. Both databases are included, and the verified repository URL is saved in `output/github_url.txt`. An anonymous clone matched the reviewed local file tree. The strict package validator passes all 42 checks. Canvas submission has not been authorized or performed; submit the repository URL there to complete that separate course step.

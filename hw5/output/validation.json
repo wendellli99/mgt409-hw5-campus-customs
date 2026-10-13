@@ -1,5 +1,5 @@
 {
-  "passed": false,
+  "passed": true,
   "checks": [
     {
       "check": "Required AI_prompts.md",
@@ -108,7 +108,7 @@
     },
     {
       "check": "Required output/github_url.txt",
-      "passed": false,
+      "passed": true,
       "detail": ""
     },
     {
@@ -205,7 +205,12 @@
       "check": "Only required model in audit",
       "passed": true,
       "detail": "{'gpt-6-luna'}"
+    },
+    {
+      "check": "Published repository URL",
+      "passed": true,
+      "detail": ""
     }
   ],
-  "failures": 1
+  "failures": 0
 }
