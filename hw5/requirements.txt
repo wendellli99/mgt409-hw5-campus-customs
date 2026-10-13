@@ -1,0 +1,8 @@
+fastmcp==3.4.8
+pydantic-ai-slim[openai,mcp]==1.107.7
+fastapi==0.142.2
+uvicorn==0.54.0
+python-dotenv==1.2.4
+httpx==0.28.1
+pytest==8.4.2
+pytest-asyncio==0.26.0

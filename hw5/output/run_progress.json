@@ -1,0 +1,63 @@
+{
+  "captured_at": "2026-10-13T19:56:34.579122+00:00",
+  "complete": true,
+  "final_artifacts_written": true,
+  "latest_reset_event_id": "a7e735460c044be299db05e2e1244884",
+  "ticket_statuses": {
+    "101": "resolved",
+    "102": "resolved",
+    "103": "resolved"
+  },
+  "pending_approvals": [],
+  "cash_reconciliation": {
+    "starting_checking": 3400.0,
+    "payment_ledger": [
+      {
+        "id": 1,
+        "kind": "invoice",
+        "ref_id": 501,
+        "amount": 840.0,
+        "account": "checking",
+        "paid_at": "2026-08-31",
+        "approved_by": "Wendell",
+        "ticket_id": 101,
+        "approval_id": "1455f4db16035d7a9cad3590",
+        "description": "Invoice 501: Rush reprint CC-TEE-WHITE S",
+        "payee": "Bulldog Print Co",
+        "checking_before": 3400.0,
+        "checking_after": 2560.0,
+        "human_event_id": "a3e2db4d66ed475cb8554bb4d06421ba"
+      },
+      {
+        "id": 2,
+        "kind": "rent",
+        "ref_id": 1,
+        "amount": 2400.0,
+        "account": "checking",
+        "paid_at": "2026-08-31",
+        "approved_by": "Wendell",
+        "ticket_id": 102,
+        "approval_id": "335018a3f5423b69486364f0",
+        "description": "Rent for Chapel Street shop, due 2026-09-02",
+        "payee": "Elm City Properties",
+        "checking_before": 2560.0,
+        "checking_after": 160.0,
+        "human_event_id": "d59b83f4d6c746878b9fc4a95bf89292"
+      }
+    ],
+    "ticket_cash_changes": {
+      "101": -840.0,
+      "102": -2400.0,
+      "103": 0.0
+    },
+    "approved_outflow": 3240.0,
+    "computed_ending": 160.0,
+    "api_ending": 160.0,
+    "mcp_ending": 160.0,
+    "database_ending": 160.0,
+    "verified": true,
+    "errors": []
+  },
+  "missing_screenshots": [],
+  "reasons": []
+}

@@ -1,0 +1,1969 @@
+{
+  "captured_at": "2026-10-13T19:56:34.579122+00:00",
+  "source": "live API, MCP shop snapshot, append-only audit after latest reset, read-only database QA",
+  "latest_reset_event_id": "a7e735460c044be299db05e2e1244884",
+  "tickets": [
+    {
+      "id": 101,
+      "ticket_id": 101,
+      "title": "Bulldog tee",
+      "final_status": "resolved",
+      "status": "resolved",
+      "review_notes": [],
+      "chronology_notes": [],
+      "financial_contexts_at_decision": [
+        {
+          "ok": true,
+          "ticket": {
+            "id": 101,
+            "type": "customer_order",
+            "requester": "Tauhid Zaman",
+            "subject": "Bulldog tee",
+            "sku": "CC-TEE-WHITE",
+            "size": "S",
+            "qty": 1,
+            "lease_id": null,
+            "invoice_id": 501,
+            "status": "open",
+            "notes": "Needs a tee in size S.",
+            "created_at": "2026-08-31T09:15:00-04:00"
+          },
+          "desk_date": "2026-08-31",
+          "checking": {
+            "name": "checking",
+            "balance": 3400.0,
+            "date": "2026-08-31"
+          },
+          "invoices": [
+            {
+              "id": 501,
+              "vendor_id": 1,
+              "amount": 840.0,
+              "due_date": "2026-08-28",
+              "status": "open",
+              "description": "Rush reprint CC-TEE-WHITE S",
+              "vendor_name": "Bulldog Print Co",
+              "overdue": true
+            }
+          ],
+          "vendors": [
+            {
+              "id": 1,
+              "name": "Bulldog Print Co",
+              "specialty": "apparel reprint",
+              "lead_days": 5,
+              "blocked": true,
+              "open_invoice_total": 840.0
+            },
+            {
+              "id": 2,
+              "name": "Elm City Gifts",
+              "specialty": "mugs and small goods",
+              "lead_days": 3,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            },
+            {
+              "id": 3,
+              "name": "QuickShip CT",
+              "specialty": "local courier",
+              "lead_days": 1,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            }
+          ],
+          "leases": [
+            {
+              "id": 1,
+              "space_name": "Chapel Street shop",
+              "landlord": "Elm City Properties",
+              "monthly_rent": 2400.0,
+              "next_due": "2026-09-02",
+              "notes": null,
+              "due_in_days": 2
+            }
+          ],
+          "payments": [],
+          "available_for_purchase": 160.0
+        },
+        {
+          "ok": true,
+          "ticket": {
+            "id": 101,
+            "type": "customer_order",
+            "requester": "Tauhid Zaman",
+            "subject": "Bulldog tee",
+            "sku": "CC-TEE-WHITE",
+            "size": "S",
+            "qty": 1,
+            "lease_id": null,
+            "invoice_id": 501,
+            "status": "open",
+            "notes": "Needs a tee in size S.",
+            "created_at": "2026-08-31T09:15:00-04:00"
+          },
+          "desk_date": "2026-08-31",
+          "checking": {
+            "name": "checking",
+            "balance": 3400.0,
+            "date": "2026-08-31"
+          },
+          "invoices": [
+            {
+              "id": 501,
+              "vendor_id": 1,
+              "amount": 840.0,
+              "due_date": "2026-08-28",
+              "status": "open",
+              "description": "Rush reprint CC-TEE-WHITE S",
+              "vendor_name": "Bulldog Print Co",
+              "overdue": true
+            }
+          ],
+          "vendors": [
+            {
+              "id": 1,
+              "name": "Bulldog Print Co",
+              "specialty": "apparel reprint",
+              "lead_days": 5,
+              "blocked": true,
+              "open_invoice_total": 840.0
+            },
+            {
+              "id": 2,
+              "name": "Elm City Gifts",
+              "specialty": "mugs and small goods",
+              "lead_days": 3,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            },
+            {
+              "id": 3,
+              "name": "QuickShip CT",
+              "specialty": "local courier",
+              "lead_days": 1,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            }
+          ],
+          "leases": [
+            {
+              "id": 1,
+              "space_name": "Chapel Street shop",
+              "landlord": "Elm City Properties",
+              "monthly_rent": 2400.0,
+              "next_due": "2026-09-02",
+              "notes": null,
+              "due_in_days": 2
+            }
+          ],
+          "payments": [],
+          "available_for_purchase": 160.0
+        },
+        {
+          "ok": true,
+          "ticket": {
+            "id": 101,
+            "type": "customer_order",
+            "requester": "Tauhid Zaman",
+            "subject": "Bulldog tee",
+            "sku": "CC-TEE-WHITE",
+            "size": "S",
+            "qty": 1,
+            "lease_id": null,
+            "invoice_id": 501,
+            "status": "open",
+            "notes": "Needs a tee in size S.",
+            "created_at": "2026-08-31T09:15:00-04:00"
+          },
+          "desk_date": "2026-08-31",
+          "checking": {
+            "name": "checking",
+            "balance": 2560.0,
+            "date": "2026-08-31"
+          },
+          "invoices": [
+            {
+              "id": 501,
+              "vendor_id": 1,
+              "amount": 840.0,
+              "due_date": "2026-08-28",
+              "status": "paid",
+              "description": "Rush reprint CC-TEE-WHITE S",
+              "vendor_name": "Bulldog Print Co",
+              "overdue": false
+            }
+          ],
+          "vendors": [
+            {
+              "id": 1,
+              "name": "Bulldog Print Co",
+              "specialty": "apparel reprint",
+              "lead_days": 5,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            },
+            {
+              "id": 2,
+              "name": "Elm City Gifts",
+              "specialty": "mugs and small goods",
+              "lead_days": 3,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            },
+            {
+              "id": 3,
+              "name": "QuickShip CT",
+              "specialty": "local courier",
+              "lead_days": 1,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            }
+          ],
+          "leases": [
+            {
+              "id": 1,
+              "space_name": "Chapel Street shop",
+              "landlord": "Elm City Properties",
+              "monthly_rent": 2400.0,
+              "next_due": "2026-09-02",
+              "notes": null,
+              "due_in_days": 2
+            }
+          ],
+          "payments": [
+            {
+              "id": 1,
+              "kind": "invoice",
+              "ref_id": 501,
+              "amount": 840.0,
+              "account": "checking",
+              "paid_at": "2026-08-31",
+              "approved_by": "Wendell"
+            }
+          ],
+          "available_for_purchase": 160.0
+        }
+      ],
+      "outcome": "Invoice 501 for the size S Bulldog tee reprint has been paid and the vendor is unblocked. Internal follow-up is scheduled with a five-day lead-time estimate (estimated arrival September 5), but supplier confirmation, shipment, confirmed quantity, and physical receipt remain pending; on-hand stock is still zero. Customer draft saved locally and not sent. Follow up when supplier confirms and update stock only after physical receipt.",
+      "resolved_at": "2026-10-13T19:51:20+00:00",
+      "short_outcome": "Invoice 501 for the size S Bulldog tee reprint has been paid and the vendor is unblocked. Internal follow-up is scheduled with a five-day lead-time estimate (estimated arrival September 5), but supplier confirmation, shipment, confirmed quantity, and physical receipt remain pending; on-hand stock is still zero. Custome",
+      "actual_agents": [
+        "Boss",
+        "Inventory",
+        "Accounting"
+      ],
+      "unused_agents": [
+        "Facilities",
+        "Customer Service"
+      ],
+      "boss_first_call": "Inventory",
+      "agent_contributions": {
+        "Accounting": [
+          {
+            "run_id": "77520e00980744fdbcc728ed088bc091",
+            "event_id": "9dca9ab04e1b4a9bac82971127a7c655",
+            "summary": "Invoice 501 is overdue and unpaid. Prepared payment request for human approval; it is pending, not paid.",
+            "timestamp": "2026-10-13T19:45:16.649707+00:00",
+            "awaiting_approval": true,
+            "evidence": [
+              "Desk date: 2026-08-31; invoice 501 due 2026-08-28, amount $840, status open/overdue.",
+              "Payee/vendor: Bulldog Print Co (vendor 1); blocked by this unpaid invoice.",
+              "Checking balance: $3,400 as of 2026-08-31; no prior payments listed.",
+              "Approval request 1455f4db16035d7a9cad3590: invoice 501 for $840, status pending."
+            ]
+          }
+        ],
+        "Inventory": [
+          {
+            "run_id": "77520e00980744fdbcc728ed088bc091",
+            "event_id": "5e1ff011833b468f9be884aab8a3c1c8",
+            "summary": "Ticket 101: CC-TEE-WHITE, size S is out of stock (0 units; Aisle B; unit cost $8, list price $28), so the requested one tee cannot be fulfilled from current stock. Invoice 501 for $840 to Bulldog Print Co is overdue and unpaid, and the vendor is blocked. Accounting prepared a human approval request for the exact $840 invoice payment; it is pending, not paid. Do not promise shipment or receipt. After human action, verify invoice payment and vendor unblocking; if cleared, use the vendor's 5-day lead-time estimate for invoice-linked follow-up, while stating stock remains zero until receipt. No replenishment quantity is confirmed.",
+            "timestamp": "2026-10-13T19:45:19.976439+00:00",
+            "awaiting_approval": true,
+            "evidence": [
+              "MCP stock lookup: CC-TEE-WHITE size S quantity 0, location Aisle B.",
+              "MCP financial context: invoice 501 is open/overdue ($840; due 2026-08-28), vendor 1 Bulldog Print Co is blocked, lead time 5 days.",
+              "Accounting verified pending human approval request for invoice 501, exact amount $840; approval is not payment."
+            ]
+          },
+          {
+            "run_id": "95683c33c6694720910026101ac52d1b",
+            "event_id": "789a4faa2b944da3a2a7b8fad3a9d365",
+            "summary": "Ticket 101: CC-TEE-WHITE, size S is out of stock (0 on hand; Aisle B). Invoice 501 for the rush reprint ($840) is paid, and Bulldog Print Co. is unblocked; do not duplicate payment. Vendor lead time is 5 days. Scheduled an internal follow-up tied to invoice 501 with an estimated arrival of 2026-09-05; supplier confirmation, shipment, and confirmed quantity remain pending, so stock stays at zero until physical receipt. Saved an unsent customer draft explaining the stockout and estimate. No purchase or stock receipt was recorded; Boss may review the draft and handle ticket resolution.",
+            "timestamp": "2026-10-13T19:51:14.784548+00:00",
+            "awaiting_approval": false,
+            "evidence": [
+              "Ticket 101 requests one CC-TEE-WHITE size S; open.",
+              "Inventory read: quantity 0, location Aisle B, unit cost $8, list price $28.",
+              "MCP financial context reports invoice 501 ($840) paid on 2026-08-31 and vendor 1 unblocked; vendor status confirms paid invoice.",
+              "Vendor lead time: 5 days; restock follow-up estimates 2026-09-05 and explicitly leaves confirmed quantity unknown and inventory unchanged.",
+              "Customer response draft saved locally; not sent."
+            ]
+          }
+        ],
+        "Boss": [
+          {
+            "run_id": "77520e00980744fdbcc728ed088bc091",
+            "event_id": "3ef259ee930c4637a2ed38dafb096dd6",
+            "summary": "Ticket 101 remains open pending human approval of the $840 payment for overdue invoice 501. Inventory confirmed CC-TEE-WHITE size S is out of stock (0 units), and Bulldog Print Co is blocked until the invoice is paid. No payment has been made, no customer draft or restock follow-up was created, and no delivery is promised.",
+            "timestamp": "2026-10-13T19:45:23.013801+00:00",
+            "awaiting_approval": true,
+            "evidence": [
+              "Inventory specialist verified stock quantity 0 for CC-TEE-WHITE size S.",
+              "Inventory specialist verified invoice 501 is overdue and unpaid; vendor is blocked with a 5-day lead-time estimate.",
+              "Accounting prepared an exact $840 invoice payment approval request; it is pending, not paid."
+            ]
+          },
+          {
+            "run_id": "95683c33c6694720910026101ac52d1b",
+            "event_id": "7189045be9f94e138e4cb8bac2da11f1",
+            "summary": "Ticket 101 resolved. The $840 invoice for the Bulldog tee size S reprint is approved and paid, and an internal follow-up is scheduled. The supplier’s five-day lead-time estimate (September 5) is not a delivery confirmation; quantity, shipment, and physical receipt remain unconfirmed, and stock remains at zero. An unsent customer draft was saved; it explains the stockout and estimate.",
+            "timestamp": "2026-10-13T19:51:24.094746+00:00",
+            "awaiting_approval": false,
+            "evidence": [
+              "Inventory specialist verified size S stock is 0; unit cost $8 and list price $28.",
+              "Invoice 501 ($840) is paid; vendor is unblocked.",
+              "Follow-up records estimated arrival September 5, with confirmed quantity unknown and inventory unchanged.",
+              "Ticket is resolved with the pending fulfillment limitation stated in the outcome."
+            ]
+          }
+        ]
+      },
+      "delegations": [
+        {
+          "from": "Boss",
+          "to": "Inventory",
+          "task": "Investigate invoice-linked supply block for ticket 101: verify SKU CC-TEE-WHITE size S stock, invoice 501 status/vendor constraints, and recommend honest next actions. Use MCP evidence; flag if payment approval is required.",
+          "run_id": "77520e00980744fdbcc728ed088bc091",
+          "event_id": "86a099bc4d3141dcb0b59b98e9052032",
+          "timestamp": "2026-10-13T19:44:56.754143+00:00"
+        },
+        {
+          "from": "Inventory",
+          "to": "Accounting",
+          "task": "For ticket 101 verify overdue invoice 501 amount/vendor block and prepare exact invoice payment request for human approval if required. Report pending approval immediately; don't do other actions.",
+          "run_id": "77520e00980744fdbcc728ed088bc091",
+          "event_id": "ddd47d271e8d401bab6008a967f447d6",
+          "timestamp": "2026-10-13T19:45:06.733679+00:00"
+        },
+        {
+          "from": "Boss",
+          "to": "Inventory",
+          "task": "Ticket 101 has invoice 501, now approved. Investigate the supply block for CC-TEE-WHITE size S, verify invoice/vendor and stock/reprint details, and advise next operational steps; do not duplicate payments.",
+          "run_id": "95683c33c6694720910026101ac52d1b",
+          "event_id": "219b1a65ec7e4ba6bb55aff5f36937ca",
+          "timestamp": "2026-10-13T19:50:52.416743+00:00"
+        }
+      ],
+      "tools_used": [
+        "draft_message",
+        "get_financial_context",
+        "get_inventory",
+        "get_ticket",
+        "get_vendor_status",
+        "prepare_payment",
+        "resolve_ticket",
+        "schedule_restock"
+      ],
+      "tool_calls_by_agent": {
+        "Boss": {
+          "get_ticket": 3,
+          "resolve_ticket": 1
+        },
+        "Inventory": {
+          "get_ticket": 2,
+          "get_inventory": 2,
+          "get_financial_context": 2,
+          "get_vendor_status": 1,
+          "schedule_restock": 1,
+          "draft_message": 1
+        },
+        "Accounting": {
+          "get_ticket": 1,
+          "get_financial_context": 1,
+          "prepare_payment": 1
+        }
+      },
+      "delegation_count": 3,
+      "mcp_call_count": 16,
+      "runs": [
+        {
+          "run_id": "77520e00980744fdbcc728ed088bc091",
+          "ticket_id": 101,
+          "status": "awaiting_approval",
+          "started_at": "2026-10-13T19:44:50.338948+00:00",
+          "finished_at": "2026-10-13T19:45:23.037476+00:00",
+          "summary": "Ticket 101 remains open pending human approval of the $840 payment for overdue invoice 501. Inventory confirmed CC-TEE-WHITE size S is out of stock (0 units), and Bulldog Print Co is blocked until the invoice is paid. No payment has been made, no customer draft or restock follow-up was created, and no delivery is promised.",
+          "error": null,
+          "usage": {
+            "input_tokens": 21238,
+            "cache_write_tokens": 6106,
+            "cache_read_tokens": 13620,
+            "output_tokens": 920,
+            "input_audio_tokens": 0,
+            "cache_audio_read_tokens": 0,
+            "output_audio_tokens": 0,
+            "details": {
+              "reasoning_tokens": 0
+            },
+            "requests": 12,
+            "tool_calls": 9
+          },
+          "contributions": {
+            "Accounting": "Invoice 501 is overdue and unpaid. Prepared payment request for human approval; it is pending, not paid.",
+            "Inventory": "Ticket 101: CC-TEE-WHITE, size S is out of stock (0 units; Aisle B; unit cost $8, list price $28), so the requested one tee cannot be fulfilled from current stock. Invoice 501 for $840 to Bulldog Print Co is overdue and unpaid, and the vendor is blocked. Accounting prepared a human approval request for the exact $840 invoice payment; it is pending, not paid. Do not promise shipment or receipt. After human action, verify invoice payment and vendor unblocking; if cleared, use the vendor's 5-day lead-time estimate for invoice-linked follow-up, while stating stock remains zero until receipt. No replenishment quantity is confirmed.",
+            "Boss": "Ticket 101 remains open pending human approval of the $840 payment for overdue invoice 501. Inventory confirmed CC-TEE-WHITE size S is out of stock (0 units), and Bulldog Print Co is blocked until the invoice is paid. No payment has been made, no customer draft or restock follow-up was created, and no delivery is promised."
+          },
+          "usage_source": "final_run_record",
+          "delegation_count": 2,
+          "mcp_call_count": 7
+        },
+        {
+          "run_id": "95683c33c6694720910026101ac52d1b",
+          "ticket_id": 101,
+          "status": "completed",
+          "started_at": "2026-10-13T19:50:47.557887+00:00",
+          "finished_at": "2026-10-13T19:51:24.123280+00:00",
+          "summary": "Ticket 101 resolved. The $840 invoice for the Bulldog tee size S reprint is approved and paid, and an internal follow-up is scheduled. The supplier’s five-day lead-time estimate (September 5) is not a delivery confirmation; quantity, shipment, and physical receipt remain unconfirmed, and stock remains at zero. An unsent customer draft was saved; it explains the stockout and estimate.",
+          "error": null,
+          "usage": {
+            "input_tokens": 26334,
+            "cache_write_tokens": 4538,
+            "cache_read_tokens": 20284,
+            "output_tokens": 1063,
+            "input_audio_tokens": 0,
+            "cache_audio_read_tokens": 0,
+            "output_audio_tokens": 0,
+            "details": {
+              "reasoning_tokens": 117
+            },
+            "requests": 12,
+            "tool_calls": 10
+          },
+          "contributions": {
+            "Inventory": "Ticket 101: CC-TEE-WHITE, size S is out of stock (0 on hand; Aisle B). Invoice 501 for the rush reprint ($840) is paid, and Bulldog Print Co. is unblocked; do not duplicate payment. Vendor lead time is 5 days. Scheduled an internal follow-up tied to invoice 501 with an estimated arrival of 2026-09-05; supplier confirmation, shipment, and confirmed quantity remain pending, so stock stays at zero until physical receipt. Saved an unsent customer draft explaining the stockout and estimate. No purchase or stock receipt was recorded; Boss may review the draft and handle ticket resolution.",
+            "Boss": "Ticket 101 resolved. The $840 invoice for the Bulldog tee size S reprint is approved and paid, and an internal follow-up is scheduled. The supplier’s five-day lead-time estimate (September 5) is not a delivery confirmation; quantity, shipment, and physical receipt remain unconfirmed, and stock remains at zero. An unsent customer draft was saved; it explains the stockout and estimate."
+          },
+          "usage_source": "final_run_record",
+          "delegation_count": 1,
+          "mcp_call_count": 9
+        }
+      ],
+      "usage": {
+        "requests": 24,
+        "input_tokens": 47572,
+        "output_tokens": 1983,
+        "cache_read_tokens": 33904,
+        "cache_write_tokens": 10644,
+        "tool_calls": 19,
+        "total_tokens": 49555
+      },
+      "human_approvals": [
+        {
+          "event_id": "a3e2db4d66ed475cb8554bb4d06421ba",
+          "run_id": "human-a2b7586e036944dda31e4d8c6cb0f084",
+          "ticket_id": 101,
+          "agent": "Human",
+          "event_type": "human_approval",
+          "message": "Wendell approved Invoice 501: Rush reprint CC-TEE-WHITE S.",
+          "timestamp": "2026-10-13T19:50:47.531769+00:00",
+          "model": null,
+          "tokens": {},
+          "input": {
+            "approval_id": "1455f4db16035d7a9cad3590",
+            "approved_by": "Wendell"
+          },
+          "output": {
+            "ok": true,
+            "idempotent": false,
+            "approval": {
+              "id": "1455f4db16035d7a9cad3590",
+              "ticket_id": 101,
+              "kind": "invoice",
+              "ref_id": 501,
+              "amount": 840.0,
+              "sku": null,
+              "size": null,
+              "qty": null,
+              "vendor_id": 1,
+              "status": "approved",
+              "created_at": "2026-10-13T19:45:13+00:00",
+              "approved_by": "Wendell",
+              "approved_at": "2026-10-13T19:50:47+00:00",
+              "payment_id": 1,
+              "description": "Invoice 501: Rush reprint CC-TEE-WHITE S",
+              "payee": "Bulldog Print Co"
+            },
+            "payment": {
+              "id": 1,
+              "kind": "invoice",
+              "ref_id": 501,
+              "amount": 840.0,
+              "account": "checking",
+              "paid_at": "2026-08-31",
+              "approved_by": "Wendell"
+            },
+            "checking": {
+              "name": "checking",
+              "balance": 2560.0,
+              "date": "2026-08-31"
+            },
+            "purchase_order": null
+          }
+        }
+      ],
+      "cash_change": -840.0,
+      "payments": [
+        {
+          "id": 1,
+          "kind": "invoice",
+          "ref_id": 501,
+          "amount": 840.0,
+          "account": "checking",
+          "paid_at": "2026-08-31",
+          "approved_by": "Wendell",
+          "ticket_id": 101,
+          "approval_id": "1455f4db16035d7a9cad3590",
+          "description": "Invoice 501: Rush reprint CC-TEE-WHITE S",
+          "payee": "Bulldog Print Co",
+          "checking_before": 3400.0,
+          "checking_after": 2560.0,
+          "human_event_id": "a3e2db4d66ed475cb8554bb4d06421ba"
+        }
+      ],
+      "drafts": [
+        {
+          "id": 2,
+          "ticket_id": 101,
+          "message": "Hi Tauhid, the size S Bulldog tee is currently out of stock. The reprint invoice has been paid and the supplier is unblocked. We’ve scheduled an internal follow-up; the supplier’s estimated lead time is five days, with an estimated arrival of September 5. This is only an estimate—the supplier has not confirmed quantity or shipment, and our on-hand stock remains zero until the items physically arrive. We’ll update you when we have confirmation.",
+          "created_at": "2026-10-13T19:51:09+00:00"
+        }
+      ],
+      "restocks": [
+        {
+          "id": 1,
+          "ticket_id": 101,
+          "sku": "CC-TEE-WHITE",
+          "size": "S",
+          "vendor_id": 1,
+          "source_invoice_id": 501,
+          "requested_qty": 1,
+          "confirmed_qty": null,
+          "scheduled_date": "2026-08-31",
+          "estimated_arrival": "2026-09-05",
+          "status": "scheduled_follow_up",
+          "note": "Internal follow-up on the paid reprint invoice. Lead-time estimate only; vendor confirmation, quantity, shipment, and physical receipt remain pending. Inventory is unchanged."
+        }
+      ],
+      "purchase_orders": [],
+      "source_event_ids": [
+        "53976fc20fa14df8b29896d079a86db3",
+        "7f6bcbe68d464da0869d53676f1e38d3",
+        "8d5eaaa44eef4c45b344370056d38956",
+        "ee27cad61571477d8b94e14833981f88",
+        "5d8759f69acb44df8d9060d9965baa88",
+        "24a2d548a0ca4b878f23e19f7152fd6a",
+        "6d4b6661816e44b5b2fed78894d908ee",
+        "a4629c3e26d34894b6f0d6c343fce377",
+        "7307ea8761d14b9aab6b74abeec8b962",
+        "86a099bc4d3141dcb0b59b98e9052032",
+        "b40491011d8e479fb2581132574fe7ad",
+        "a99b8d730a824646a8baf60776b09f85",
+        "eaa08a80bcae4afd89e2d43b6ff2ea79",
+        "5c1c62e1e0434b21adeecd0a7b31290f",
+        "fe2aa78ccd2d4bc5a1791a9f46fe92b8",
+        "8d4e67477b404c8aba62598e79af6d88",
+        "42eba509af5f4b5e8d34a55eba588d7d",
+        "f98a0333b2a641048c66863a3f248fbb",
+        "d844993261fe4ab18b6248e32e1d60e9",
+        "06c90f7312ec44149d2728dcceab7e44",
+        "3446e51a6317409d8f81034a42d4e782",
+        "73919287b0754dbc931ea30adfcbc781",
+        "9260a12b646b4505888394269b8f498b",
+        "9ac8f3be20ec4409a36e14bac284cfce",
+        "42bd064244484a23bf343b1ea740054a",
+        "8db0aca32a1147d69da98b626b05d1e9",
+        "ddd47d271e8d401bab6008a967f447d6",
+        "af4e7f298eea4ae8a2c79fc5c9b0d61e",
+        "1cfb95c8fc1a4cd7b984f65622223a41",
+        "80696e08860d4dfb8f2641efb0fca267",
+        "7381050bb4f44776b7a33d9032e0bc00",
+        "9a5a782e37f34febb701af96657bd2a6",
+        "16185b08f9ec4626ab7868179e72d459",
+        "c95ec2f875234df18c4c4b86b6fd0da2",
+        "d41a5f4bcb404c8c839d7ef57f8178e6",
+        "ac50cd822d3c457dbee5bc1a78765af9",
+        "e1e5d3474a4e43bf8992ef51e7cc103a",
+        "24f9252da88d40a8a529662e03933ee6",
+        "9d18b1a3977a422c90430d5ab9cb5581",
+        "bc7b4d4a0cef49a9b009f910e43139cb",
+        "8a9d872e9bf54f65821a2a8f3323b4fe",
+        "0e8ff0bc858f434baeabb170de820d38",
+        "9f9ab41e4c044677a03c35502d9b26b0",
+        "13ce5f683bbe4508a5d48aa7c84d5be0",
+        "9dca9ab04e1b4a9bac82971127a7c655",
+        "ff8fd73cfaef41c6b351c5360bf063f1",
+        "5ee9cdd3f46946d5805a4b009b3c5446",
+        "c7dc45ec1f104737bda0fac00c2fd2ac",
+        "bd87a2134bb5440693b6e5827ceb703c",
+        "5e1ff011833b468f9be884aab8a3c1c8",
+        "516f2ad41fbd4803a823c316c0bcf262",
+        "eedeb870ddb94b96b883140a219cda7d",
+        "48acc0d8e9154aff8ca359ef01cdab5b",
+        "43141f278c7e46bca7183ef13f966e44",
+        "3ef259ee930c4637a2ed38dafb096dd6",
+        "1b72ecfe10f24ebd9a7db18b53053eae",
+        "a3e2db4d66ed475cb8554bb4d06421ba",
+        "e33869ac916942179587397c3db088be",
+        "d064c53bd2fa4097a09e3d78f147ebb4",
+        "d6118373b95846709af0f05cc3585479",
+        "91198410880644a3a5aa7b4ccb1cf987",
+        "8912632b0d9d496eab6353b3bf822fa2",
+        "70c27ae90a51439cada11b992d28636f",
+        "fb859ffcec4643e886a1a49b1ded9959",
+        "17ff7c422cd64cecb81cca5496712bb5",
+        "af05d1a39e3b4e0987b5978987cd18aa",
+        "219b1a65ec7e4ba6bb55aff5f36937ca",
+        "e1a5b1ad595046da9652166660b6cf11",
+        "221cd90a873e4ad18134705f45e426f1",
+        "8dbedff6b51043f0bca1992a76f33fa3",
+        "e1a8500b3f634f3398728889b7b583c8",
+        "2673ac8cc0864442b931fe63acbaf0b1",
+        "bc9a30ae92fb4f5480f760cbf0278ca7",
+        "41bc25398d5b44fcb4e21d812ac70d48",
+        "04afdf76e68e44c08ed814a3e8bb27dc",
+        "2396ffe6045a435182cdc6df4e9ac267",
+        "acf6d32803254a7c840434f04f23c440",
+        "d3d234a114fe4f8dad34d92398ddccc7",
+        "7a4697ee8b204f67a09a9dff720298bc",
+        "0937e5de322c4e328cea1343df83e097",
+        "448b8d3c176d4dfbab0e5c82176cd887",
+        "06f739a9b8f84dfd96be12ef395801df",
+        "22d8d945bfe04fe995b02cf6a9e5e534",
+        "1e4d0eb65e4e41d5bb4a9659de2d5079",
+        "e7337917cec74cb8ad848c934d507971",
+        "e5267974abc34bc0b07378b4e586231c",
+        "dd520a64aadd4c6da43f352606811814",
+        "c2324c0f8f9d4d34a48b73a3a193683d",
+        "83cf0b5306e248bda1ff2df63a8f6813",
+        "6accbda5e7254c97aac78fc7c588de2b",
+        "2a59af3b77da47bc95762b17265d59d3",
+        "8bc74439d26c4858be660572ee606d55",
+        "6dbce29c16d64ab79d06910c4e70f51d",
+        "12e69e6731254009bf4cd68221f57787",
+        "b3393db3258849718e5e1813911258be",
+        "04f5b9ade18e4815a0a1a185414d2244",
+        "789a4faa2b944da3a2a7b8fad3a9d365",
+        "15a5902c68fb4301afd3d9a8787a44aa",
+        "4dfc71d844b448a1a0647af1356f0b94",
+        "130244d630c4480eb54fa4ed6b5237b3",
+        "d8ce2628e8994b1b8af602dd9e74cb57",
+        "7c8dd7915e8a43dc8aee507b1b19d80f",
+        "1862d8b8d648498098b8a37bd623802b",
+        "be8dc1e5952f4d0a8689665323d06d8f",
+        "12e5bc29e2bf459eb1da64332c6edfdc",
+        "450447d972074e229581ae5499237daa",
+        "8db87c1844f241ef8fa4783e76bd37bc",
+        "a2aa8ab8a7204359b50f42c004962f03",
+        "1680ebbdb3f74753aadb353c1470d81c",
+        "7189045be9f94e138e4cb8bac2da11f1",
+        "518e56b0f3824373a5a99b0275451162"
+      ]
+    },
+    {
+      "id": 102,
+      "ticket_id": 102,
+      "title": "Rent due",
+      "final_status": "resolved",
+      "status": "resolved",
+      "review_notes": [
+        "Review correction: the original rent due date was 2026-09-02. Payment 2 on 2026-08-31 advanced lease 1 by one month to 2026-10-02, as expected. The original ticket note about rent due in two days describes the pre-payment obligation; it is historical context, not a conflict with the updated lease. The final team summary called it a conflict, which is a verification/wording mistake. The payment and due-date transition were correct."
+      ],
+      "chronology_notes": [],
+      "financial_contexts_at_decision": [
+        {
+          "ok": true,
+          "ticket": {
+            "id": 102,
+            "type": "rent_notice",
+            "requester": "Elm City Properties",
+            "subject": "Rent due",
+            "sku": null,
+            "size": null,
+            "qty": null,
+            "lease_id": 1,
+            "invoice_id": null,
+            "status": "open",
+            "notes": "Email: shop rent due in 2 days.",
+            "created_at": "2026-08-31T11:05:00-04:00"
+          },
+          "desk_date": "2026-08-31",
+          "checking": {
+            "name": "checking",
+            "balance": 3400.0,
+            "date": "2026-08-31"
+          },
+          "invoices": [
+            {
+              "id": 501,
+              "vendor_id": 1,
+              "amount": 840.0,
+              "due_date": "2026-08-28",
+              "status": "open",
+              "description": "Rush reprint CC-TEE-WHITE S",
+              "vendor_name": "Bulldog Print Co",
+              "overdue": true
+            }
+          ],
+          "vendors": [
+            {
+              "id": 1,
+              "name": "Bulldog Print Co",
+              "specialty": "apparel reprint",
+              "lead_days": 5,
+              "blocked": true,
+              "open_invoice_total": 840.0
+            },
+            {
+              "id": 2,
+              "name": "Elm City Gifts",
+              "specialty": "mugs and small goods",
+              "lead_days": 3,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            },
+            {
+              "id": 3,
+              "name": "QuickShip CT",
+              "specialty": "local courier",
+              "lead_days": 1,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            }
+          ],
+          "leases": [
+            {
+              "id": 1,
+              "space_name": "Chapel Street shop",
+              "landlord": "Elm City Properties",
+              "monthly_rent": 2400.0,
+              "next_due": "2026-09-02",
+              "notes": null,
+              "due_in_days": 2
+            }
+          ],
+          "payments": [],
+          "available_for_purchase": 160.0
+        },
+        {
+          "ok": true,
+          "ticket": {
+            "id": 102,
+            "type": "rent_notice",
+            "requester": "Elm City Properties",
+            "subject": "Rent due",
+            "sku": null,
+            "size": null,
+            "qty": null,
+            "lease_id": 1,
+            "invoice_id": null,
+            "status": "open",
+            "notes": "Email: shop rent due in 2 days.",
+            "created_at": "2026-08-31T11:05:00-04:00"
+          },
+          "desk_date": "2026-08-31",
+          "checking": {
+            "name": "checking",
+            "balance": 3400.0,
+            "date": "2026-08-31"
+          },
+          "invoices": [
+            {
+              "id": 501,
+              "vendor_id": 1,
+              "amount": 840.0,
+              "due_date": "2026-08-28",
+              "status": "open",
+              "description": "Rush reprint CC-TEE-WHITE S",
+              "vendor_name": "Bulldog Print Co",
+              "overdue": true
+            }
+          ],
+          "vendors": [
+            {
+              "id": 1,
+              "name": "Bulldog Print Co",
+              "specialty": "apparel reprint",
+              "lead_days": 5,
+              "blocked": true,
+              "open_invoice_total": 840.0
+            },
+            {
+              "id": 2,
+              "name": "Elm City Gifts",
+              "specialty": "mugs and small goods",
+              "lead_days": 3,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            },
+            {
+              "id": 3,
+              "name": "QuickShip CT",
+              "specialty": "local courier",
+              "lead_days": 1,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            }
+          ],
+          "leases": [
+            {
+              "id": 1,
+              "space_name": "Chapel Street shop",
+              "landlord": "Elm City Properties",
+              "monthly_rent": 2400.0,
+              "next_due": "2026-09-02",
+              "notes": null,
+              "due_in_days": 2
+            }
+          ],
+          "payments": [],
+          "available_for_purchase": 160.0
+        },
+        {
+          "ok": true,
+          "ticket": {
+            "id": 102,
+            "type": "rent_notice",
+            "requester": "Elm City Properties",
+            "subject": "Rent due",
+            "sku": null,
+            "size": null,
+            "qty": null,
+            "lease_id": 1,
+            "invoice_id": null,
+            "status": "open",
+            "notes": "Email: shop rent due in 2 days.",
+            "created_at": "2026-08-31T11:05:00-04:00"
+          },
+          "desk_date": "2026-08-31",
+          "checking": {
+            "name": "checking",
+            "balance": 160.0,
+            "date": "2026-08-31"
+          },
+          "invoices": [
+            {
+              "id": 501,
+              "vendor_id": 1,
+              "amount": 840.0,
+              "due_date": "2026-08-28",
+              "status": "paid",
+              "description": "Rush reprint CC-TEE-WHITE S",
+              "vendor_name": "Bulldog Print Co",
+              "overdue": false
+            }
+          ],
+          "vendors": [
+            {
+              "id": 1,
+              "name": "Bulldog Print Co",
+              "specialty": "apparel reprint",
+              "lead_days": 5,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            },
+            {
+              "id": 2,
+              "name": "Elm City Gifts",
+              "specialty": "mugs and small goods",
+              "lead_days": 3,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            },
+            {
+              "id": 3,
+              "name": "QuickShip CT",
+              "specialty": "local courier",
+              "lead_days": 1,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            }
+          ],
+          "leases": [
+            {
+              "id": 1,
+              "space_name": "Chapel Street shop",
+              "landlord": "Elm City Properties",
+              "monthly_rent": 2400.0,
+              "next_due": "2026-10-02",
+              "notes": null,
+              "due_in_days": 32
+            }
+          ],
+          "payments": [
+            {
+              "id": 1,
+              "kind": "invoice",
+              "ref_id": 501,
+              "amount": 840.0,
+              "account": "checking",
+              "paid_at": "2026-08-31",
+              "approved_by": "Wendell"
+            },
+            {
+              "id": 2,
+              "kind": "rent",
+              "ref_id": 1,
+              "amount": 2400.0,
+              "account": "checking",
+              "paid_at": "2026-08-31",
+              "approved_by": "Wendell"
+            }
+          ],
+          "available_for_purchase": 160.0
+        },
+        {
+          "ok": true,
+          "ticket": {
+            "id": 102,
+            "type": "rent_notice",
+            "requester": "Elm City Properties",
+            "subject": "Rent due",
+            "sku": null,
+            "size": null,
+            "qty": null,
+            "lease_id": 1,
+            "invoice_id": null,
+            "status": "open",
+            "notes": "Email: shop rent due in 2 days.",
+            "created_at": "2026-08-31T11:05:00-04:00"
+          },
+          "desk_date": "2026-08-31",
+          "checking": {
+            "name": "checking",
+            "balance": 160.0,
+            "date": "2026-08-31"
+          },
+          "invoices": [
+            {
+              "id": 501,
+              "vendor_id": 1,
+              "amount": 840.0,
+              "due_date": "2026-08-28",
+              "status": "paid",
+              "description": "Rush reprint CC-TEE-WHITE S",
+              "vendor_name": "Bulldog Print Co",
+              "overdue": false
+            }
+          ],
+          "vendors": [
+            {
+              "id": 1,
+              "name": "Bulldog Print Co",
+              "specialty": "apparel reprint",
+              "lead_days": 5,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            },
+            {
+              "id": 2,
+              "name": "Elm City Gifts",
+              "specialty": "mugs and small goods",
+              "lead_days": 3,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            },
+            {
+              "id": 3,
+              "name": "QuickShip CT",
+              "specialty": "local courier",
+              "lead_days": 1,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            }
+          ],
+          "leases": [
+            {
+              "id": 1,
+              "space_name": "Chapel Street shop",
+              "landlord": "Elm City Properties",
+              "monthly_rent": 2400.0,
+              "next_due": "2026-10-02",
+              "notes": null,
+              "due_in_days": 32
+            }
+          ],
+          "payments": [
+            {
+              "id": 1,
+              "kind": "invoice",
+              "ref_id": 501,
+              "amount": 840.0,
+              "account": "checking",
+              "paid_at": "2026-08-31",
+              "approved_by": "Wendell"
+            },
+            {
+              "id": 2,
+              "kind": "rent",
+              "ref_id": 1,
+              "amount": 2400.0,
+              "account": "checking",
+              "paid_at": "2026-08-31",
+              "approved_by": "Wendell"
+            }
+          ],
+          "available_for_purchase": 160.0
+        },
+        {
+          "ok": true,
+          "ticket": {
+            "id": 102,
+            "type": "rent_notice",
+            "requester": "Elm City Properties",
+            "subject": "Rent due",
+            "sku": null,
+            "size": null,
+            "qty": null,
+            "lease_id": 1,
+            "invoice_id": null,
+            "status": "open",
+            "notes": "Email: shop rent due in 2 days.",
+            "created_at": "2026-08-31T11:05:00-04:00"
+          },
+          "desk_date": "2026-08-31",
+          "checking": {
+            "name": "checking",
+            "balance": 160.0,
+            "date": "2026-08-31"
+          },
+          "invoices": [
+            {
+              "id": 501,
+              "vendor_id": 1,
+              "amount": 840.0,
+              "due_date": "2026-08-28",
+              "status": "paid",
+              "description": "Rush reprint CC-TEE-WHITE S",
+              "vendor_name": "Bulldog Print Co",
+              "overdue": false
+            }
+          ],
+          "vendors": [
+            {
+              "id": 1,
+              "name": "Bulldog Print Co",
+              "specialty": "apparel reprint",
+              "lead_days": 5,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            },
+            {
+              "id": 2,
+              "name": "Elm City Gifts",
+              "specialty": "mugs and small goods",
+              "lead_days": 3,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            },
+            {
+              "id": 3,
+              "name": "QuickShip CT",
+              "specialty": "local courier",
+              "lead_days": 1,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            }
+          ],
+          "leases": [
+            {
+              "id": 1,
+              "space_name": "Chapel Street shop",
+              "landlord": "Elm City Properties",
+              "monthly_rent": 2400.0,
+              "next_due": "2026-10-02",
+              "notes": null,
+              "due_in_days": 32
+            }
+          ],
+          "payments": [
+            {
+              "id": 1,
+              "kind": "invoice",
+              "ref_id": 501,
+              "amount": 840.0,
+              "account": "checking",
+              "paid_at": "2026-08-31",
+              "approved_by": "Wendell"
+            },
+            {
+              "id": 2,
+              "kind": "rent",
+              "ref_id": 1,
+              "amount": 2400.0,
+              "account": "checking",
+              "paid_at": "2026-08-31",
+              "approved_by": "Wendell"
+            }
+          ],
+          "available_for_purchase": 160.0
+        }
+      ],
+      "outcome": "Rent payment of $2,400 for lease 1 was recorded as paid on 2026-08-31 (payment #2). The lease record gives next_due as 2026-10-02, which is 32 days after desk date 2026-08-31; ticket note saying rent was due in two days conflicts with the lease date. Saved an unsent draft to Elm City Properties stating the payment and recorded next due date. No further payment is pending.",
+      "resolved_at": "2026-10-13T19:52:08+00:00",
+      "short_outcome": "Rent payment of $2,400 for lease 1 was recorded as paid on 2026-08-31 (payment #2). The lease record gives next_due as 2026-10-02, which is 32 days after desk date 2026-08-31; ticket note saying rent was due in two days conflicts with the lease date. Saved an unsent draft to Elm City Properties stating the payment and ",
+      "actual_agents": [
+        "Boss",
+        "Accounting",
+        "Facilities"
+      ],
+      "unused_agents": [
+        "Inventory",
+        "Customer Service"
+      ],
+      "boss_first_call": "Facilities",
+      "agent_contributions": {
+        "Accounting": [
+          {
+            "run_id": "e433c8573ae743e7a626e643a253191e",
+            "event_id": "628ad87299ac4b8dab6912c73d84a1f3",
+            "summary": "Lease rent for Chapel Street shop (lease 1, Elm City Properties) is $2,400, due 2026-09-02—two days after the desk date, 2026-08-31. No prior payments are recorded. Checking is $3,400 as of 2026-08-31. Prepared rent approval request 335018a3f5423b69486364f0 for $2,400; status is pending human approval. No payment has been made.",
+            "timestamp": "2026-10-13T19:46:15.268031+00:00",
+            "awaiting_approval": true,
+            "evidence": [
+              "Ticket 102 identifies lease_id 1 and rent notice from Elm City Properties.",
+              "Financial context: lease 1 monthly rent $2,400, next due 2026-09-02; desk date 2026-08-31.",
+              "Financial context records no payments.",
+              "Checking balance: $3,400 dated 2026-08-31.",
+              "Prepared approval 335018a3f5423b69486364f0: rent, $2,400, Elm City Properties, pending."
+            ]
+          },
+          {
+            "run_id": "d6ccf05b0fd34d60840578bf0d2c8172",
+            "event_id": "a490f284554d4cdb937b42e291894ba0",
+            "summary": "Rent payment is completed: the approved $2,400 payment for lease 1 (Chapel Street shop, Elm City Properties) has payment record #2, paid from checking on 2026-08-31. The lease’s next rent due date is 2026-10-02; as of the desk date 2026-08-31 it was 32 days away. No further payment request is needed.",
+            "timestamp": "2026-10-13T19:51:57.706302+00:00",
+            "awaiting_approval": false,
+            "evidence": [
+              "Ticket 102 approval: rent, ref_id 1, $2,400, status approved, payment_id 2.",
+              "Financial context records payment #2 for rent/lease 1, $2,400, paid 2026-08-31, approved by Wendell.",
+              "Lease 1: Chapel Street shop, landlord Elm City Properties, monthly rent $2,400; next due 2026-10-02 (32 days from desk date 2026-08-31)."
+            ]
+          }
+        ],
+        "Facilities": [
+          {
+            "run_id": "e433c8573ae743e7a626e643a253191e",
+            "event_id": "4f6a7a2edc3f4df89d3b0af737775f50",
+            "summary": "Ticket 102: Lease 1 for the Chapel Street shop with Elm City Properties lists rent of $2,400 due 2026-09-02. Desk date is 2026-08-31, so it is due in two days, not overdue. Accounting confirms no rent payment is recorded and has prepared approval request 335018a3f5423b69486364f0 for $2,400; it is pending human approval. No payment has been made.",
+            "timestamp": "2026-10-13T19:46:19.002045+00:00",
+            "awaiting_approval": true,
+            "evidence": [
+              "Ticket 102 identifies lease_id 1 and Elm City Properties.",
+              "Financial context: lease 1, Chapel Street shop, monthly rent $2,400, next_due 2026-09-02; desk_date 2026-08-31.",
+              "Financial context records no payments; checking balance is $3,400 as of 2026-08-31.",
+              "Accounting prepared rent approval 335018a3f5423b69486364f0 for $2,400; pending human approval."
+            ]
+          },
+          {
+            "run_id": "d6ccf05b0fd34d60840578bf0d2c8172",
+            "event_id": "e1d5d784308b48f38a6cc0a0772f5aa8",
+            "summary": "Rent was paid: payment #2 records $2,400 for lease 1, paid from checking on 2026-08-31. Lease 1 is for the Chapel Street shop with Elm City Properties; monthly rent is $2,400. The recorded lease due date is 2026-10-02, 32 days after the desk date (2026-08-31), so the deadline is not approaching or overdue as of that date. No further payment request is needed.",
+            "timestamp": "2026-10-13T19:52:00.246494+00:00",
+            "awaiting_approval": false,
+            "evidence": [
+              "Ticket 102 rent approval is approved and references payment_id 2 for $2,400.",
+              "Financial context records payment #2 for rent/lease 1, paid 2026-08-31, approved by Wendell.",
+              "Lease 1: Elm City Properties; Chapel Street shop; monthly rent $2,400; next_due 2026-10-02; 32 days from desk date 2026-08-31."
+            ]
+          }
+        ],
+        "Boss": [
+          {
+            "run_id": "e433c8573ae743e7a626e643a253191e",
+            "event_id": "289f470893fe459b9d40cf5ea1c0a6e9",
+            "summary": "Ticket 102: Rent of $2,400 is due 2026-09-02, two days after the desk date of 2026-08-31. Facilities confirmed no payment is recorded. A rent payment request is prepared and pending human approval; no payment has been made. Ticket remains unresolved pending that decision.",
+            "timestamp": "2026-10-13T19:46:21.333692+00:00",
+            "awaiting_approval": true,
+            "evidence": [
+              "Facilities confirmed lease 1 rent is $2,400 due 2026-09-02.",
+              "Accounting reports a pending human approval for $2,400; request ID 335018a3f5423b69486364f0.",
+              "Checking balance reported as $3,400; no rent payment recorded."
+            ]
+          },
+          {
+            "run_id": "d6ccf05b0fd34d60840578bf0d2c8172",
+            "event_id": "957ffd556a8d4d1092faef9a47b36e00",
+            "summary": "Ticket 102 resolved. The $2,400 rent payment was recorded paid on 2026-08-31 (payment #2). The lease record lists the next due date as 2026-10-02, 32 days after the desk date of 2026-08-31, which conflicts with the ticket note saying rent was due in two days. Saved a draft to Elm City Properties; it has not been sent. No additional payment is pending.",
+            "timestamp": "2026-10-13T19:52:10.567495+00:00",
+            "awaiting_approval": false,
+            "evidence": [
+              "Facilities confirmed the approved rent payment and lease details.",
+              "Financial context records payment #2 for $2,400 on 2026-08-31 and lease next_due 2026-10-02.",
+              "Saved draft explicitly states payment date and recorded next due date; draft_message confirms sent=false.",
+              "Ticket status is resolved."
+            ]
+          }
+        ]
+      },
+      "delegations": [
+        {
+          "from": "Boss",
+          "to": "Facilities",
+          "task": "Investigate ticket 102 rent notice: confirm lease/deadline and coordinate with Accounting to prepare required rent payment approval if due. Report MCP evidence and whether approval is pending; do not approve.",
+          "run_id": "e433c8573ae743e7a626e643a253191e",
+          "event_id": "05419fd217b74476b82ccd583cd3bc55",
+          "timestamp": "2026-10-13T19:45:58.488576+00:00"
+        },
+        {
+          "from": "Facilities",
+          "to": "Accounting",
+          "task": "For ticket 102 rent notice, confirm lease rent amount, existing rent payments and cash status from MCP, and prepare payment approval for lease rent if due. Report approval status immediately; do not approve.",
+          "run_id": "e433c8573ae743e7a626e643a253191e",
+          "event_id": "802b42c462094626a0c0c3971ab37b11",
+          "timestamp": "2026-10-13T19:46:03.930046+00:00"
+        },
+        {
+          "from": "Boss",
+          "to": "Facilities",
+          "task": "Confirm lease/rent deadline and payment status for ticket 102; since approval is already approved, verify payment/context via MCP and report facts and next step.",
+          "run_id": "d6ccf05b0fd34d60840578bf0d2c8172",
+          "event_id": "cf5177d8d2104df692f411830b3aa2bc",
+          "timestamp": "2026-10-13T19:51:41.940163+00:00"
+        },
+        {
+          "from": "Facilities",
+          "to": "Accounting",
+          "task": "For ticket 102, verify from existing MCP evidence the approved rent payment status/amount and lease due info. Report payment completion status and any next step; do not prepare another request.",
+          "run_id": "d6ccf05b0fd34d60840578bf0d2c8172",
+          "event_id": "1dca1c2ee837441cae02c5e978e8f231",
+          "timestamp": "2026-10-13T19:51:51.335895+00:00"
+        }
+      ],
+      "tools_used": [
+        "draft_message",
+        "get_financial_context",
+        "get_ticket",
+        "prepare_payment",
+        "resolve_ticket"
+      ],
+      "tool_calls_by_agent": {
+        "Boss": {
+          "get_ticket": 3,
+          "get_financial_context": 1,
+          "draft_message": 1,
+          "resolve_ticket": 1
+        },
+        "Accounting": {
+          "get_ticket": 2,
+          "get_financial_context": 2,
+          "prepare_payment": 1
+        },
+        "Facilities": {
+          "get_ticket": 2,
+          "get_financial_context": 2
+        }
+      },
+      "delegation_count": 4,
+      "mcp_call_count": 15,
+      "runs": [
+        {
+          "run_id": "e433c8573ae743e7a626e643a253191e",
+          "ticket_id": 102,
+          "status": "awaiting_approval",
+          "started_at": "2026-10-13T19:45:51.529311+00:00",
+          "finished_at": "2026-10-13T19:46:21.360549+00:00",
+          "summary": "Ticket 102: Rent of $2,400 is due 2026-09-02, two days after the desk date of 2026-08-31. Facilities confirmed no payment is recorded. A rent payment request is prepared and pending human approval; no payment has been made. Ticket remains unresolved pending that decision.",
+          "error": null,
+          "usage": {
+            "input_tokens": 18830,
+            "cache_write_tokens": 3321,
+            "cache_read_tokens": 14123,
+            "output_tokens": 947,
+            "input_audio_tokens": 0,
+            "cache_audio_read_tokens": 0,
+            "output_audio_tokens": 0,
+            "details": {
+              "reasoning_tokens": 0
+            },
+            "requests": 11,
+            "tool_calls": 8
+          },
+          "contributions": {
+            "Accounting": "Lease rent for Chapel Street shop (lease 1, Elm City Properties) is $2,400, due 2026-09-02—two days after the desk date, 2026-08-31. No prior payments are recorded. Checking is $3,400 as of 2026-08-31. Prepared rent approval request 335018a3f5423b69486364f0 for $2,400; status is pending human approval. No payment has been made.",
+            "Facilities": "Ticket 102: Lease 1 for the Chapel Street shop with Elm City Properties lists rent of $2,400 due 2026-09-02. Desk date is 2026-08-31, so it is due in two days, not overdue. Accounting confirms no rent payment is recorded and has prepared approval request 335018a3f5423b69486364f0 for $2,400; it is pending human approval. No payment has been made.",
+            "Boss": "Ticket 102: Rent of $2,400 is due 2026-09-02, two days after the desk date of 2026-08-31. Facilities confirmed no payment is recorded. A rent payment request is prepared and pending human approval; no payment has been made. Ticket remains unresolved pending that decision."
+          },
+          "usage_source": "final_run_record",
+          "delegation_count": 2,
+          "mcp_call_count": 6
+        },
+        {
+          "run_id": "d6ccf05b0fd34d60840578bf0d2c8172",
+          "ticket_id": 102,
+          "status": "completed",
+          "started_at": "2026-10-13T19:51:38.266462+00:00",
+          "finished_at": "2026-10-13T19:52:10.601402+00:00",
+          "summary": "Ticket 102 resolved. The $2,400 rent payment was recorded paid on 2026-08-31 (payment #2). The lease record lists the next due date as 2026-10-02, 32 days after the desk date of 2026-08-31, which conflicts with the ticket note saying rent was due in two days. Saved a draft to Elm City Properties; it has not been sent. No additional payment is pending.",
+          "error": null,
+          "usage": {
+            "input_tokens": 30211,
+            "cache_write_tokens": 4889,
+            "cache_read_tokens": 23558,
+            "output_tokens": 1068,
+            "input_audio_tokens": 0,
+            "cache_audio_read_tokens": 0,
+            "output_audio_tokens": 0,
+            "details": {
+              "reasoning_tokens": 0
+            },
+            "requests": 14,
+            "tool_calls": 11
+          },
+          "contributions": {
+            "Accounting": "Rent payment is completed: the approved $2,400 payment for lease 1 (Chapel Street shop, Elm City Properties) has payment record #2, paid from checking on 2026-08-31. The lease’s next rent due date is 2026-10-02; as of the desk date 2026-08-31 it was 32 days away. No further payment request is needed.",
+            "Facilities": "Rent was paid: payment #2 records $2,400 for lease 1, paid from checking on 2026-08-31. Lease 1 is for the Chapel Street shop with Elm City Properties; monthly rent is $2,400. The recorded lease due date is 2026-10-02, 32 days after the desk date (2026-08-31), so the deadline is not approaching or overdue as of that date. No further payment request is needed.",
+            "Boss": "Ticket 102 resolved. The $2,400 rent payment was recorded paid on 2026-08-31 (payment #2). The lease record lists the next due date as 2026-10-02, 32 days after the desk date of 2026-08-31, which conflicts with the ticket note saying rent was due in two days. Saved a draft to Elm City Properties; it has not been sent. No additional payment is pending."
+          },
+          "usage_source": "final_run_record",
+          "delegation_count": 2,
+          "mcp_call_count": 9
+        }
+      ],
+      "usage": {
+        "requests": 25,
+        "input_tokens": 49041,
+        "output_tokens": 2015,
+        "cache_read_tokens": 37681,
+        "cache_write_tokens": 8210,
+        "tool_calls": 19,
+        "total_tokens": 51056
+      },
+      "human_approvals": [
+        {
+          "event_id": "d59b83f4d6c746878b9fc4a95bf89292",
+          "run_id": "human-3cde20a7efde4e6ca9e0c4d7c0688861",
+          "ticket_id": 102,
+          "agent": "Human",
+          "event_type": "human_approval",
+          "message": "Wendell approved Rent for Chapel Street shop, due 2026-09-02.",
+          "timestamp": "2026-10-13T19:51:38.241925+00:00",
+          "model": null,
+          "tokens": {},
+          "input": {
+            "approval_id": "335018a3f5423b69486364f0",
+            "approved_by": "Wendell"
+          },
+          "output": {
+            "ok": true,
+            "idempotent": false,
+            "approval": {
+              "id": "335018a3f5423b69486364f0",
+              "ticket_id": 102,
+              "kind": "rent",
+              "ref_id": 1,
+              "amount": 2400.0,
+              "sku": null,
+              "size": null,
+              "qty": null,
+              "vendor_id": null,
+              "status": "approved",
+              "created_at": "2026-10-13T19:46:11+00:00",
+              "approved_by": "Wendell",
+              "approved_at": "2026-10-13T19:51:38+00:00",
+              "payment_id": 2,
+              "description": "Rent for Chapel Street shop, due 2026-09-02",
+              "payee": "Elm City Properties"
+            },
+            "payment": {
+              "id": 2,
+              "kind": "rent",
+              "ref_id": 1,
+              "amount": 2400.0,
+              "account": "checking",
+              "paid_at": "2026-08-31",
+              "approved_by": "Wendell"
+            },
+            "checking": {
+              "name": "checking",
+              "balance": 160.0,
+              "date": "2026-08-31"
+            },
+            "purchase_order": null
+          }
+        }
+      ],
+      "cash_change": -2400.0,
+      "payments": [
+        {
+          "id": 2,
+          "kind": "rent",
+          "ref_id": 1,
+          "amount": 2400.0,
+          "account": "checking",
+          "paid_at": "2026-08-31",
+          "approved_by": "Wendell",
+          "ticket_id": 102,
+          "approval_id": "335018a3f5423b69486364f0",
+          "description": "Rent for Chapel Street shop, due 2026-09-02",
+          "payee": "Elm City Properties",
+          "checking_before": 2560.0,
+          "checking_after": 160.0,
+          "human_event_id": "d59b83f4d6c746878b9fc4a95bf89292"
+        }
+      ],
+      "drafts": [
+        {
+          "id": 3,
+          "ticket_id": 102,
+          "message": "Our records show the $2,400 rent payment for the Chapel Street shop was made on August 31, 2026. The lease record lists the next due date as October 2, 2026. Please let us know if you need the payment confirmation.",
+          "created_at": "2026-10-13T19:52:06+00:00"
+        }
+      ],
+      "restocks": [],
+      "purchase_orders": [],
+      "source_event_ids": [
+        "8826313c31b747c6b8e39ae8e9f48edb",
+        "9583cbcf4a2144d2a1e04a56f2ed34a2",
+        "70bc1e9daf6e468d9a87e6cc68952b17",
+        "dbc4cc8dc67e4673b3d2ae9d4292b97b",
+        "cf69c76d40da4ac7a589fef28723af1e",
+        "c4c22516ea284c2e8a2dd591b729bb92",
+        "dab6202a4356456a8a3e7056c97a7e0c",
+        "2abcedace1f6462a9414284bb2ae52e6",
+        "0043c1e5f1274329accf6a952b519a63",
+        "05419fd217b74476b82ccd583cd3bc55",
+        "71aa1f2b48eb4c3e88afc16121ac2b53",
+        "763b8bd4b5d64807a9fc807215bdfd8b",
+        "1fa80724ca4843c9990521712b77e2d0",
+        "52d4bdab29384ce8829642ff7d2e41df",
+        "a918947e3c304c41a3e2664c44d4fe12",
+        "589de23b11ea424bad1cb3dc1f7abd90",
+        "08db0d0eb93d4746b363089d8df17326",
+        "a38995e316b64e49bd728611e3075c29",
+        "c81d5a5ce62c414e8aaf5e6fb1b0014f",
+        "f741c454492147d7ae75edbed0a30d15",
+        "73d40a361d434a4ea7703962e39616f9",
+        "a6c67d2afcd544fda7edfd06bb7fd625",
+        "802b42c462094626a0c0c3971ab37b11",
+        "d3acb4955fda434982869af5c9292fbb",
+        "6cbeb00378224f2cabb0173552231477",
+        "096378f71b274148b1b7463f9e0b5063",
+        "0e8c3313a26e4fcea3930b89ff4a3d4e",
+        "73078d068ce44ffc849de81be8a15958",
+        "6d8e69bb61ff4c3fb595c185be21c4a0",
+        "afcfaf8e37784d828ca5100d83b76e76",
+        "a1af658f6d4e446284a06b54cdafcff1",
+        "8f38bf02f2074108840cefe2088e908f",
+        "724aaaafc74d4431a662ebe3f3ba584a",
+        "b7d732a4fd5642fb8033e911597afb95",
+        "3c3d9f666eae4f418639ec73df2157ff",
+        "311aac9f750f4e1296a61a026231ba6a",
+        "f0c20d5252bb4c58b9e2eb19119c0852",
+        "f2b4c4a55c5e408a89971ba1c9cfc98d",
+        "fcd41efa46f9485caa9c2a52ef7b774b",
+        "a23cd45da5184bdfafd887f59204ce4c",
+        "628ad87299ac4b8dab6912c73d84a1f3",
+        "f80473d1bb204072a4ed8e7eb58cee77",
+        "b546cd1aa32048fc8b79e513b5f86bb9",
+        "b3843520579943f58d061bda7dd2fbea",
+        "b667c2859bec439bab9b967af6149bb0",
+        "4f6a7a2edc3f4df89d3b0af737775f50",
+        "c3f983fb444c4bf9a92b2495203e9af6",
+        "5bde2e09b8e145ff978d4d174605288c",
+        "24a81bc598c44b6b9da8c1c22ea58051",
+        "c162791227484038af3ed47c67f35043",
+        "289f470893fe459b9d40cf5ea1c0a6e9",
+        "593a0ba2a8484657b1e48eb87b780622",
+        "d59b83f4d6c746878b9fc4a95bf89292",
+        "5df91f613dc14fe4b92291a447be426f",
+        "09fcb361eebf4654acc9867203702287",
+        "794422da539746528e341f1baf36034c",
+        "7414bd7b37734eedbbc72c2ea807301c",
+        "518e59afbc3e4724a2878e3685f3bf98",
+        "ed594d2c138e43ce8388e1d0638414a0",
+        "344babaab4984491a2d67f27bde3d10b",
+        "fd2b3cf59cbc4695956834c4a07acb08",
+        "0aa3066227834b34ad47e3238592cb03",
+        "cf5177d8d2104df692f411830b3aa2bc",
+        "dd1f3fa6a77649c8bd88615d077768e1",
+        "9661b795160440bba37ca587422d52d2",
+        "8fc4d787bd5349cab2d51510b3fba9b2",
+        "bd986d080e9242f48ab1b221eea3b1a8",
+        "5be94094dc6847eaa06106ac46989984",
+        "56e412e2876f47b9b8d9a0121863d69c",
+        "d251f9f4fff94f45b20ca94de0acf0d1",
+        "49b5b478b1224a20b822d52e1d54acce",
+        "f081349ed7c84ded9c66760f5349e3e3",
+        "f39933f06f044bd3944c3533e62e4959",
+        "d1119727f93b4a45a70ba217e5da3ce9",
+        "30130009c7734b0e82871e31499f593c",
+        "1dca1c2ee837441cae02c5e978e8f231",
+        "117d931f503d4d3fbca311b894b01003",
+        "f3a47eb36c514d0ba108d60ba1d5559f",
+        "95919af47e0b413c9e8c1381d19cb875",
+        "16984e8361e6471c940479fdb1791d33",
+        "4e55302460654e938be4708e16e94a57",
+        "5f6971d2716d40758d8c476ee805c238",
+        "191699f7db844297bf8f65c47b83e959",
+        "9add1deef3d64ceab764f097d5993961",
+        "25204c2955ff44139563c262c688e9bc",
+        "3a8f67038edb44feb997478c21431778",
+        "5954a81430774c438819b7846298f817",
+        "27f5234855414494be9f1f3823b5b560",
+        "cd641ddb35e0432cbc0464eb9d63c14b",
+        "a490f284554d4cdb937b42e291894ba0",
+        "535d3e6d48f94f4e81b8308791bda5c0",
+        "a86545593373457c8921ff5a7bb8fb93",
+        "a8dd772f6e1d45bdb1c6e33799bcc075",
+        "4c5a9605f2614e8283283f604b917c00",
+        "e1d5d784308b48f38a6cc0a0772f5aa8",
+        "33bc393edb1b4c1586ea3e43cc56d836",
+        "1ecbbc3f4f204441a14a920d33f893be",
+        "ce894f7479ac455f835a1876d587e766",
+        "da4b00fb42b3484ba2c1ac2d1d893bbd",
+        "e9077aa77b7e4e66b480b01325eb5fe8",
+        "494890b1d60a4147857c2fbaef550c4d",
+        "f8cee7a3584b491d9cf193211f0ddaa5",
+        "57d3094d37e64078a1d1cb1a7f04c22a",
+        "16ca7207e6844d95ad51e515b7f97262",
+        "3e481ccec4ff4925adacdabe9c9d4191",
+        "e735b2db401f40d6a78fc5dfc8f4b4a5",
+        "6ec0d93389ae4fd892dd5dc7cb6286d6",
+        "b76d229d361d44d6b055ce0beaf2a5f3",
+        "553906e42e444e5da870a0768ba636f7",
+        "dc83c3b88e984d42bf96e44117d1925f",
+        "dbebd17aff004bcfab29375a8756ebca",
+        "5507e7c1d5fe4de79eb3fd18c0c745ad",
+        "aee26fe144d6436ab768360b7e7d0da1",
+        "930a6532317742e1b482d9e9627e1e8d",
+        "9a6454316e7741afb4f7f144da67a87f",
+        "957ffd556a8d4d1092faef9a47b36e00",
+        "ce50cfceb00d499c9b7e7701dbc214fa"
+      ]
+    },
+    {
+      "id": 103,
+      "ticket_id": 103,
+      "title": "Bulk hoodie discount",
+      "final_status": "resolved",
+      "status": "resolved",
+      "review_notes": [],
+      "chronology_notes": [
+        "Decision chronology: ticket 103 was evaluated and resolved before the two authorized payments. Checking then held $3,400.00, but invoice 501 was unpaid and Bulldog Print Co was blocked. Reserving its $840 invoice and the imminent $2,400 rent left $160 available for a discretionary purchase. The 12 missing medium hoodies cost $264, creating a $104 gap. The later invoice payment unblocked the vendor, but paying both obligations left $160 actual checking, so the $104 cash gap remained. The stored outcome records the decision-time vendor block; it is not a claim that the vendor remained blocked after the invoice payment."
+      ],
+      "financial_contexts_at_decision": [
+        {
+          "ok": true,
+          "ticket": {
+            "id": 103,
+            "type": "price_override",
+            "requester": "Yale AI Club",
+            "subject": "Bulk hoodie discount",
+            "sku": "CC-HOOD-NAVY",
+            "size": "M",
+            "qty": 20,
+            "lease_id": null,
+            "invoice_id": null,
+            "status": "open",
+            "notes": "Student org wants 20 hoodies, size M, asking for a bulk discount.",
+            "created_at": "2026-08-31T16:55:00-04:00"
+          },
+          "desk_date": "2026-08-31",
+          "checking": {
+            "name": "checking",
+            "balance": 3400.0,
+            "date": "2026-08-31"
+          },
+          "invoices": [
+            {
+              "id": 501,
+              "vendor_id": 1,
+              "amount": 840.0,
+              "due_date": "2026-08-28",
+              "status": "open",
+              "description": "Rush reprint CC-TEE-WHITE S",
+              "vendor_name": "Bulldog Print Co",
+              "overdue": true
+            }
+          ],
+          "vendors": [
+            {
+              "id": 1,
+              "name": "Bulldog Print Co",
+              "specialty": "apparel reprint",
+              "lead_days": 5,
+              "blocked": true,
+              "open_invoice_total": 840.0
+            },
+            {
+              "id": 2,
+              "name": "Elm City Gifts",
+              "specialty": "mugs and small goods",
+              "lead_days": 3,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            },
+            {
+              "id": 3,
+              "name": "QuickShip CT",
+              "specialty": "local courier",
+              "lead_days": 1,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            }
+          ],
+          "leases": [
+            {
+              "id": 1,
+              "space_name": "Chapel Street shop",
+              "landlord": "Elm City Properties",
+              "monthly_rent": 2400.0,
+              "next_due": "2026-09-02",
+              "notes": null,
+              "due_in_days": 2
+            }
+          ],
+          "payments": [],
+          "available_for_purchase": 160.0
+        }
+      ],
+      "outcome": "Request for 20 size M navy hoodies cannot be confirmed: current availability is 8, supplier replenishment is blocked by overdue invoice #501, and available funds after obligations are insufficient for the reported 12-unit gap. Discount terms remain unconfirmed; $58 is list price only. Unsent draft offers discussing up to 8 available units or deferring while constraints are addressed. No order or purchase was placed.",
+      "resolved_at": "2026-10-13T19:48:37+00:00",
+      "short_outcome": "Request for 20 size M navy hoodies cannot be confirmed: current availability is 8, supplier replenishment is blocked by overdue invoice #501, and available funds after obligations are insufficient for the reported 12-unit gap. Discount terms remain unconfirmed; $58 is list price only. Unsent draft offers discussing up ",
+      "actual_agents": [
+        "Boss",
+        "Inventory",
+        "Accounting",
+        "Customer Service"
+      ],
+      "unused_agents": [
+        "Facilities"
+      ],
+      "boss_first_call": "Customer Service",
+      "agent_contributions": {
+        "Accounting": [
+          {
+            "run_id": "15d42c31f74e4d98b52c38f6415527eb",
+            "event_id": "f5b9c5feee8d47b983c8a316d6f33b4e",
+            "summary": "For 20 CC-HOOD-NAVY size M, 8 are on hand, so the additional quantity is 12. At $22 unit cost, the incremental purchase would cost $264. Available for purchases after reservations is $160, a $104 shortfall; no purchase request was prepared. Bulldog Print Co is blocked by open, overdue invoice #501 for $840 (due 2026-08-28). Checking is $3,400; $2,400 rent for lease #1 at Chapel Street shop, payable to Elm City Properties, is due 2026-09-02, leaving $160 available for purchase after the rent and invoice reservations. At the $58 list-price assumption (no discount specified), revenue for 20 is $1,160; cost of all 20 including existing stock is $440; gross profit is $720 and gross margin is 62.1%. Gross profit is not the same as incremental cash required. Defer the order pending funds and vendor unblocking; the requested discount is not priced here.",
+            "timestamp": "2026-10-13T19:48:18.184984+00:00",
+            "awaiting_approval": false,
+            "evidence": [
+              "Ticket 103 requests 20 size M hoodies; no discount amount is stated.",
+              "Inventory: 8 on hand, $22 unit cost, $58 list price.",
+              "20 − 8 = 12 additional units; 12 × $22 = $264; $264 − $160 available = $104 funding gap.",
+              "Desk date 2026-08-31; checking $3,400; invoice #501 for $840 is open and overdue, due 2026-08-28; rent lease #1 is $2,400 due 2026-09-02.",
+              "Vendor status confirms Bulldog Print Co is blocked by the open invoice.",
+              "At list-price assumption: 20 × $58 = $1,160 revenue; 20 × $22 = $440 total cost; $1,160 − $440 = $720 gross profit; $720 ÷ $1,160 = 62.1% margin."
+            ]
+          }
+        ],
+        "Inventory": [
+          {
+            "run_id": "15d42c31f74e4d98b52c38f6415527eb",
+            "event_id": "0d78fe31adbe478fbada5090315723d2",
+            "summary": "Ticket 103: 8 CC-HOOD-NAVY, size M, are on hand at Aisle A; fulfilling 20 requires 12 more. At $22/unit, the incremental purchase would be $264. Accounting verified only $160 is available after obligations, a $104 shortfall. Bulldog Print Co is blocked by overdue invoice #501 ($840); no purchase approval was prepared. Defer ordering until the vendor is unblocked and funds are sufficient. List price is $58; assuming all 20 sell at list, revenue is $1,160, total cost is $440, gross profit $720, margin 62.1%. The discount requested is unspecified, so discounted margin cannot be calculated. Do not promise fulfillment based on a purchase order; stock remains 8 until additional units are received.",
+            "timestamp": "2026-10-13T19:48:25.628237+00:00",
+            "awaiting_approval": false,
+            "evidence": [
+              "Ticket requests 20 hoodies, size M; inventory reports 8 on hand, SKU CC-HOOD-NAVY, location Aisle A, $22 cost and $58 list price.",
+              "Gap: 20 − 8 = 12 units; incremental cost: 12 × $22 = $264.",
+              "Accounting MCP report: $160 available after rent and invoice reservations, leaving a $104 shortfall; no purchase request prepared.",
+              "Accounting report: Bulldog Print Co blocked by overdue invoice #501 for $840; due 2026-08-28.",
+              "At list price only: 20 × $58 revenue; 20 × $22 total cost; $720 gross profit and 62.1% gross margin."
+            ]
+          }
+        ],
+        "Customer Service": [
+          {
+            "run_id": "15d42c31f74e4d98b52c38f6415527eb",
+            "event_id": "db0d68d9e4624e1b8a0b41cea6ebcf32",
+            "summary": "Saved an unsent customer draft offering discussion of up to 8 currently available size M hoodies or deferral; it does not promise a discount or full order. The request for 20 cannot currently be fulfilled: 12 additional units are needed, their $264 cost exceeds the $160 available after obligations, and the supplier is blocked by an overdue invoice. No purchase approval is pending, and no stock was deducted. Discounted pricing remains unconfirmed.",
+            "timestamp": "2026-10-13T19:48:32.167411+00:00",
+            "awaiting_approval": false,
+            "evidence": [
+              "Ticket 103 requests 20 CC-HOOD-NAVY, size M.",
+              "Inventory specialist reported 8 on hand, leaving a 12-unit gap; replenishment would cost $264.",
+              "Accounting specialist reported $160 available after obligations, $104 short of incremental purchase cost, and supplier block due to overdue invoice #501 ($840).",
+              "Specialist's list-price-only estimate: $58 each; discounted margin cannot be assessed because discount is unspecified.",
+              "Saved unsent draft; no order placed."
+            ]
+          }
+        ],
+        "Boss": [
+          {
+            "run_id": "15d42c31f74e4d98b52c38f6415527eb",
+            "event_id": "4966a34192584e61a1f09c03c27b7a08",
+            "summary": "Ticket 103 resolved. The request for 20 navy size-M hoodies cannot be confirmed: reported stock is 8, supplier replenishment is blocked by overdue invoice #501, and funding is insufficient for the additional 12. Discount terms remain unconfirmed; $58 is list price only. An unsent draft offers discussing up to 8 available hoodies or deferring. No order or purchase was placed.",
+            "timestamp": "2026-10-13T19:48:40.407623+00:00",
+            "awaiting_approval": false,
+            "evidence": [
+              "Customer Service investigated and saved the unsent draft.",
+              "Specialist-reported stock: 8; additional units needed: 12; estimated replenishment cost: $264 against $160 available after obligations.",
+              "Supplier blocked by overdue invoice #501 ($840).",
+              "Ticket outcome saved and status is resolved."
+            ]
+          }
+        ]
+      },
+      "delegations": [
+        {
+          "from": "Boss",
+          "to": "Customer Service",
+          "task": "Investigate ticket 103 bulk hoodie discount request: understand customer offer/request and use MCP evidence; coordinate Inventory/Accounting as needed for availability and feasible pricing/cash. Report recommendation and any required approval.",
+          "run_id": "15d42c31f74e4d98b52c38f6415527eb",
+          "event_id": "a5735f7ee76c48e986008407e7c74f1e",
+          "timestamp": "2026-10-13T19:47:29.457998+00:00"
+        },
+        {
+          "from": "Customer Service",
+          "to": "Inventory",
+          "task": "Ticket 103: verify exact on-hand M hoodie units and fulfillment gap for 20; vendor availability/terms. If new stock needed, ask Accounting to assess incremental cost vs funds after rent/invoices; report pricing/margin constraints too.",
+          "run_id": "15d42c31f74e4d98b52c38f6415527eb",
+          "event_id": "a0c18f5181ff4b308f5a6740c683801e",
+          "timestamp": "2026-10-13T19:47:34.209486+00:00"
+        },
+        {
+          "from": "Inventory",
+          "to": "Accounting",
+          "task": "Ticket 103: verify incremental purchase cost/funds after rent and invoices for gap of 12 CC-HOOD-NAVY size M. Also price/margin constraints if available. Please use MCP and report pending approval if required.",
+          "run_id": "15d42c31f74e4d98b52c38f6415527eb",
+          "event_id": "a8e7edf59f8a4e938e906d462c9f8993",
+          "timestamp": "2026-10-13T19:47:40.597770+00:00"
+        }
+      ],
+      "tools_used": [
+        "draft_message",
+        "get_financial_context",
+        "get_inventory",
+        "get_ticket",
+        "get_vendor_status",
+        "resolve_ticket"
+      ],
+      "tool_calls_by_agent": {
+        "Boss": {
+          "get_ticket": 2,
+          "resolve_ticket": 1
+        },
+        "Inventory": {
+          "get_ticket": 1,
+          "get_inventory": 1
+        },
+        "Accounting": {
+          "get_ticket": 1,
+          "get_financial_context": 1,
+          "get_inventory": 1,
+          "get_vendor_status": 1
+        },
+        "Customer Service": {
+          "get_ticket": 1,
+          "draft_message": 1
+        }
+      },
+      "delegation_count": 3,
+      "mcp_call_count": 11,
+      "runs": [
+        {
+          "run_id": "15d42c31f74e4d98b52c38f6415527eb",
+          "ticket_id": 103,
+          "status": "completed",
+          "started_at": "2026-10-13T19:47:23.108943+00:00",
+          "finished_at": "2026-10-13T19:48:40.436083+00:00",
+          "summary": "Ticket 103 resolved. The request for 20 navy size-M hoodies cannot be confirmed: reported stock is 8, supplier replenishment is blocked by overdue invoice #501, and funding is insufficient for the additional 12. Discount terms remain unconfirmed; $58 is list price only. An unsent draft offers discussing up to 8 available hoodies or deferring. No order or purchase was placed.",
+          "error": null,
+          "usage": {
+            "input_tokens": 33640,
+            "cache_write_tokens": 7009,
+            "cache_read_tokens": 24363,
+            "output_tokens": 2215,
+            "input_audio_tokens": 0,
+            "cache_audio_read_tokens": 0,
+            "output_audio_tokens": 0,
+            "details": {
+              "reasoning_tokens": 233
+            },
+            "requests": 18,
+            "tool_calls": 14
+          },
+          "contributions": {
+            "Accounting": "For 20 CC-HOOD-NAVY size M, 8 are on hand, so the additional quantity is 12. At $22 unit cost, the incremental purchase would cost $264. Available for purchases after reservations is $160, a $104 shortfall; no purchase request was prepared. Bulldog Print Co is blocked by open, overdue invoice #501 for $840 (due 2026-08-28). Checking is $3,400; $2,400 rent for lease #1 at Chapel Street shop, payable to Elm City Properties, is due 2026-09-02, leaving $160 available for purchase after the rent and invoice reservations. At the $58 list-price assumption (no discount specified), revenue for 20 is $1,160; cost of all 20 including existing stock is $440; gross profit is $720 and gross margin is 62.1%. Gross profit is not the same as incremental cash required. Defer the order pending funds and vendor unblocking; the requested discount is not priced here.",
+            "Inventory": "Ticket 103: 8 CC-HOOD-NAVY, size M, are on hand at Aisle A; fulfilling 20 requires 12 more. At $22/unit, the incremental purchase would be $264. Accounting verified only $160 is available after obligations, a $104 shortfall. Bulldog Print Co is blocked by overdue invoice #501 ($840); no purchase approval was prepared. Defer ordering until the vendor is unblocked and funds are sufficient. List price is $58; assuming all 20 sell at list, revenue is $1,160, total cost is $440, gross profit $720, margin 62.1%. The discount requested is unspecified, so discounted margin cannot be calculated. Do not promise fulfillment based on a purchase order; stock remains 8 until additional units are received.",
+            "Customer Service": "Saved an unsent customer draft offering discussion of up to 8 currently available size M hoodies or deferral; it does not promise a discount or full order. The request for 20 cannot currently be fulfilled: 12 additional units are needed, their $264 cost exceeds the $160 available after obligations, and the supplier is blocked by an overdue invoice. No purchase approval is pending, and no stock was deducted. Discounted pricing remains unconfirmed.",
+            "Boss": "Ticket 103 resolved. The request for 20 navy size-M hoodies cannot be confirmed: reported stock is 8, supplier replenishment is blocked by overdue invoice #501, and funding is insufficient for the additional 12. Discount terms remain unconfirmed; $58 is list price only. An unsent draft offers discussing up to 8 available hoodies or deferring. No order or purchase was placed."
+          },
+          "usage_source": "final_run_record",
+          "delegation_count": 3,
+          "mcp_call_count": 11
+        }
+      ],
+      "usage": {
+        "requests": 18,
+        "input_tokens": 33640,
+        "output_tokens": 2215,
+        "cache_read_tokens": 24363,
+        "cache_write_tokens": 7009,
+        "tool_calls": 14,
+        "total_tokens": 35855
+      },
+      "human_approvals": [],
+      "cash_change": 0.0,
+      "payments": [],
+      "drafts": [
+        {
+          "id": 1,
+          "ticket_id": 103,
+          "message": "Hi Yale AI Club,\n\nThanks for reaching out about 20 navy hoodies in size M. We currently have 8 available. We can discuss an order for up to those 8, but we can’t confirm the full 20 right now: replenishment is blocked while an outstanding supplier invoice is unpaid, and the additional 12 units would require more funding. We also can’t confirm a bulk-discounted price yet; the $58 list price is the current reference, not a quoted discounted offer. Would you prefer to discuss the 8 currently available, or wait while we work through replenishment? No order has been placed.\n\nBest,\nCampus Customs",
+          "created_at": "2026-10-13T19:48:28+00:00"
+        }
+      ],
+      "restocks": [],
+      "purchase_orders": [],
+      "source_event_ids": [
+        "d5a147a40f3348848a6adb07b87ecb13",
+        "99b463bbee074ffe9de89ebf704fcc85",
+        "0ba29138d871467da5ff2c2daed8c1fe",
+        "072320c77ca14b3f8ca95a98638e2fae",
+        "75138d3aa21a4d13a3bdd0aee115a103",
+        "da4632af5194459fbe7dcf59f58ef0ba",
+        "1669eac65eb646f79185d4cba4b14c95",
+        "74ad015123864f04bdea6d7f074dca7c",
+        "80461518c9304ee1a7108ecd8dbab306",
+        "a5735f7ee76c48e986008407e7c74f1e",
+        "a3f762ad3c384dd1a40ccd6edabfbe44",
+        "4ebd2f6d17854dbab03e4d06ea8d650a",
+        "e72e25fdd5394425b3cd09edd4ba4a09",
+        "b845f7fafd5a4e87be52a944b07c85c6",
+        "a18863cb74a2487c98e03ae41e8d4301",
+        "e2a356992b4144acbc0449f6f1794c3d",
+        "abbb66557ad844fe903617afdb3bbeb0",
+        "5bbc05b5284244aba672245c5f616438",
+        "a0c18f5181ff4b308f5a6740c683801e",
+        "4677958eaa734a208b454291cfa94289",
+        "d88de0bfb4794387aff97191cf41a0ca",
+        "3a6b26275e5c4a48bb500167c62cc61b",
+        "35b9188061344301847c18de152ccbdf",
+        "3c174e73be544e1da959c21398a0d40a",
+        "631ef44e390a4444bcef4c848473a79d",
+        "a75eebea76f74571b38f36245c7821d6",
+        "780bbfb922f84cf9824b37e68c760285",
+        "209bfeea74304845b13f288499af306b",
+        "e49a369950de4812ab04439f3d739411",
+        "136aa4e7c5ff45b88729b2a7c0c5dbab",
+        "aed22fdce0f04cd29f3097cb3d4511d4",
+        "a8e7edf59f8a4e938e906d462c9f8993",
+        "21e267b008f542eda7a56b0eb024c102",
+        "f86d69ebe9f344dab73b31339693ed95",
+        "57904a00944642d5ad84d17524027198",
+        "3f503c89a30d461099746d5591e6d1af",
+        "de7fe38ee5664cea8811903eda71d4b4",
+        "65c6be5b7edd4ff9bcd4a25fa3724764",
+        "f0f88fa1010f4175a7001197d8f0f6e3",
+        "d02f7ad2bcdd4f1f8919803ca8ff69e7",
+        "f3a0a53ae6694a37b0284adac40fea36",
+        "d9329bfcef89416697d95a3574edea3b",
+        "8fbe23d9a99640fab8a7b42c43309d27",
+        "c9f35ddcdca647279305193644236e61",
+        "4016616482e545249e42af5fa02e5d90",
+        "e354f6b53f1a485293f9531e00f9963b",
+        "cc534aa2e22b40db865bf9bb2ac09919",
+        "224ad62f281d4f41a87da71625422e3f",
+        "d525d879a9584acfbcf42a8d1ebb3ea6",
+        "2d94581a177d469782eae037f7c00793",
+        "957b25603263460d91dd229818717d76",
+        "fa3623e6775e46eeb1ca48186615b9ea",
+        "5d0696ecbc95446f8f069fc19648db61",
+        "f5b9c5feee8d47b983c8a316d6f33b4e",
+        "740d67a4a8744fb384bc13ee4e8b27c4",
+        "9c4ca66c28b94c8d92d1faf7820546d8",
+        "409eeccd2d3c4a0badeff243bf10ef1f",
+        "55ff2666e9284f87be91860c0e109c72",
+        "0d78fe31adbe478fbada5090315723d2",
+        "dc0bc4690b1947079e0bd026a2cf8fa5",
+        "1cee6e8c9e5a44e29c05459a216cf5f1",
+        "09b7ea0954ad4f8da3799a4928868401",
+        "fa47b5627d964f70991fdb591815c4cd",
+        "7067f4612a154db8b4bc46d840fca5bd",
+        "3892b5aaaaae4406b814893095d2448a",
+        "235ede8eff6545f997d639c92fc4e275",
+        "8083374ce80848d6a98782914a3acdd1",
+        "db0d68d9e4624e1b8a0b41cea6ebcf32",
+        "67a06fae6b6340a68a3319d60b906683",
+        "c3e8a863b5724d6cac9ff224f4cb3fd7",
+        "3609f1ecefb04aa49f67bfd6aeaa5c1c",
+        "601578eab89d40a1a3b8d1f5ee4d0ad6",
+        "9734a2cafc424c41bbc1c7f1a6b0b34c",
+        "8c0d8b81eef643ff8b17778d1222c84b",
+        "680f6850367e434ea5d2b0bfc8e08b52",
+        "f6a7507640f9411ba97d7b3e7dbe1818",
+        "d6c0d524580a4389ad018256b9370d23",
+        "861962e8977d43378b2fb21b1a070493",
+        "71c1c70eb2774d4b8f90d268cccbc88d",
+        "8e6581ddc3824872ac6476566aca8f7d",
+        "4966a34192584e61a1f09c03c27b7a08",
+        "01dbe630174348d2b5db3ddaa3341cb5"
+      ]
+    }
+  ],
+  "cash": {
+    "starting_checking": 3400.0,
+    "payment_ledger": [
+      {
+        "id": 1,
+        "kind": "invoice",
+        "ref_id": 501,
+        "amount": 840.0,
+        "account": "checking",
+        "paid_at": "2026-08-31",
+        "approved_by": "Wendell",
+        "ticket_id": 101,
+        "approval_id": "1455f4db16035d7a9cad3590",
+        "description": "Invoice 501: Rush reprint CC-TEE-WHITE S",
+        "payee": "Bulldog Print Co",
+        "checking_before": 3400.0,
+        "checking_after": 2560.0,
+        "human_event_id": "a3e2db4d66ed475cb8554bb4d06421ba"
+      },
+      {
+        "id": 2,
+        "kind": "rent",
+        "ref_id": 1,
+        "amount": 2400.0,
+        "account": "checking",
+        "paid_at": "2026-08-31",
+        "approved_by": "Wendell",
+        "ticket_id": 102,
+        "approval_id": "335018a3f5423b69486364f0",
+        "description": "Rent for Chapel Street shop, due 2026-09-02",
+        "payee": "Elm City Properties",
+        "checking_before": 2560.0,
+        "checking_after": 160.0,
+        "human_event_id": "d59b83f4d6c746878b9fc4a95bf89292"
+      }
+    ],
+    "ticket_cash_changes": {
+      "101": -840.0,
+      "102": -2400.0,
+      "103": 0.0
+    },
+    "approved_outflow": 3240.0,
+    "computed_ending": 160.0,
+    "api_ending": 160.0,
+    "mcp_ending": 160.0,
+    "database_ending": 160.0,
+    "verified": true,
+    "errors": []
+  },
+  "shared_usage_across_distinct_runs": {
+    "requests": 67,
+    "input_tokens": 130253,
+    "output_tokens": 6213,
+    "cache_read_tokens": 95948,
+    "cache_write_tokens": 25863,
+    "tool_calls": 52,
+    "total_tokens": 136466
+  },
+  "delegation_count": 10,
+  "mcp_call_count": 42
+}

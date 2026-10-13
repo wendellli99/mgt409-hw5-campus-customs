@@ -1,0 +1,157 @@
+{
+  "tested_at": "2026-10-13T19:38:46.742613+00:00",
+  "transport": "streamable-http",
+  "url": "http://127.0.0.1:8001/mcp",
+  "prompt_note": "Prompts are prepared test requests used for this protocol smoke run, not a claimed transcript of human messages.",
+  "available_tools": [
+    "get_ticket",
+    "get_inventory",
+    "get_financial_context",
+    "list_tickets",
+    "get_shop_snapshot",
+    "get_vendor_status",
+    "prepare_payment",
+    "list_approvals",
+    "approve_payment",
+    "schedule_restock",
+    "draft_message",
+    "resolve_ticket",
+    "reset_database"
+  ],
+  "tests": [
+    {
+      "prepared_test_prompt": "Look up ticket 101 and show the customer request, linked invoice, and current status.",
+      "tool_name": "get_ticket",
+      "arguments": {
+        "ticket_id": 101
+      },
+      "output": {
+        "ok": true,
+        "ticket": {
+          "id": 101,
+          "type": "customer_order",
+          "requester": "Tauhid Zaman",
+          "subject": "Bulldog tee",
+          "sku": "CC-TEE-WHITE",
+          "size": "S",
+          "qty": 1,
+          "lease_id": null,
+          "invoice_id": 501,
+          "status": "open",
+          "notes": "Needs a tee in size S.",
+          "created_at": "2026-08-31T09:15:00-04:00"
+        },
+        "drafts": [],
+        "outcome": null,
+        "restock": null,
+        "approvals": []
+      },
+      "mcp_is_error": false
+    },
+    {
+      "prepared_test_prompt": "Check the real inventory and unit costs for medium navy Yale hoodies before promising the AI Club 20 units.",
+      "tool_name": "get_inventory",
+      "arguments": {
+        "sku": "CC-HOOD-NAVY",
+        "size": "M"
+      },
+      "output": {
+        "ok": true,
+        "items": [
+          {
+            "sku": "CC-HOOD-NAVY",
+            "name": "Basic Hoodie Big Yale",
+            "size": "M",
+            "qty": 8,
+            "location": "Aisle A",
+            "unit_cost": 22.0,
+            "list_price": 58.0
+          }
+        ]
+      },
+      "mcp_is_error": false
+    },
+    {
+      "prepared_test_prompt": "Inspect the shop date, checking balance, unpaid vendor invoice, and next rent obligation for ticket 102.",
+      "tool_name": "get_financial_context",
+      "arguments": {
+        "ticket_id": 102
+      },
+      "output": {
+        "ok": true,
+        "ticket": {
+          "id": 102,
+          "type": "rent_notice",
+          "requester": "Elm City Properties",
+          "subject": "Rent due",
+          "sku": null,
+          "size": null,
+          "qty": null,
+          "lease_id": 1,
+          "invoice_id": null,
+          "status": "open",
+          "notes": "Email: shop rent due in 2 days.",
+          "created_at": "2026-08-31T11:05:00-04:00"
+        },
+        "desk_date": "2026-08-31",
+        "checking": {
+          "name": "checking",
+          "balance": 3400.0,
+          "date": "2026-08-31"
+        },
+        "invoices": [
+          {
+            "id": 501,
+            "vendor_id": 1,
+            "amount": 840.0,
+            "due_date": "2026-08-28",
+            "status": "open",
+            "description": "Rush reprint CC-TEE-WHITE S",
+            "vendor_name": "Bulldog Print Co",
+            "overdue": true
+          }
+        ],
+        "vendors": [
+          {
+            "id": 1,
+            "name": "Bulldog Print Co",
+            "specialty": "apparel reprint",
+            "lead_days": 5,
+            "blocked": true,
+            "open_invoice_total": 840.0
+          },
+          {
+            "id": 2,
+            "name": "Elm City Gifts",
+            "specialty": "mugs and small goods",
+            "lead_days": 3,
+            "blocked": false,
+            "open_invoice_total": 0.0
+          },
+          {
+            "id": 3,
+            "name": "QuickShip CT",
+            "specialty": "local courier",
+            "lead_days": 1,
+            "blocked": false,
+            "open_invoice_total": 0.0
+          }
+        ],
+        "leases": [
+          {
+            "id": 1,
+            "space_name": "Chapel Street shop",
+            "landlord": "Elm City Properties",
+            "monthly_rent": 2400.0,
+            "next_due": "2026-09-02",
+            "notes": null,
+            "due_in_days": 2
+          }
+        ],
+        "payments": [],
+        "available_for_purchase": 160.0
+      },
+      "mcp_is_error": false
+    }
+  ]
+}

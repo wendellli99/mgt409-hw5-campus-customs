@@ -1,0 +1,211 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "check": "Required AI_prompts.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required requirements.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required .env.example",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required .gitignore",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required .mcp.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required data/campus_customs.db",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required data/campus_customs_new.db",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required mcp_server/server.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required mcp_server/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required backend/main.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required backend/models.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required frontend/package.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required frontend/src/App.tsx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required output/harness.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required output/mcp_smoke.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required output/desk_tickets.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required output/design.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required output/resolved_tickets.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required output/resolved_board.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required output/audit_trail.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Required output/github_url.txt",
+      "passed": false,
+      "detail": ""
+    },
+    {
+      "check": "Detailed boss prompt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Detailed inventory prompt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Detailed accounting prompt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Detailed facilities prompt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Detailed customer_service prompt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Original download unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "All three tickets resolved",
+      "passed": true,
+      "detail": "[(101, 'resolved'), (102, 'resolved'), (103, 'resolved')]"
+    },
+    {
+      "check": "Cash equals original minus payments",
+      "passed": true,
+      "detail": "160.00 = 3400 - 3240.00"
+    },
+    {
+      "check": "Nonnegative checking",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Every payment records a human approver",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Eleven prompt sections",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "No forbidden user prompt heading",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Ticket Cash Reflection tabs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Actual evidence filled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Reflection filled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Cash filled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Three saved board screenshots",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Real audit present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "Only required model in audit",
+      "passed": true,
+      "detail": "{'gpt-6-luna'}"
+    }
+  ],
+  "failures": 1
+}
