@@ -38,6 +38,25 @@ if (ROOT/'data/campus_customs_new.db').exists():
 prompts=(ROOT/'AI_prompts.md').read_text() if (ROOT/'AI_prompts.md').exists() else ''
 check('Eleven prompt sections', len(re.findall(r'^## Problem \d+ ',prompts,re.M))==11)
 check('No forbidden user prompt heading', 'actual user prompt' not in '\n'.join(x.lower() for x in prompts.splitlines() if x.startswith('#')))
+sections=re.split(r'^## Problem \d+ ',prompts,flags=re.M)[1:]
+check('Several prepared prompts per problem', len(sections)==11 and all(len(re.findall(r'^\d+\. ',s,re.M))>=3 for s in sections))
+smoke=ROOT/'output/mcp_smoke.json'
+if smoke.exists():
+    evidence=json.loads(smoke.read_text())
+    native=evidence.get('tests',[])
+    names={'get_ticket','get_inventory','get_financial_context'}
+    check('Connected coding assistant smoke recorded',evidence.get('vibe_coder')=='Codex CLI 0.162.1' and bool(evidence.get('native_session_id')))
+    check('Three successful native MCP calls',len(native)==3 and {t.get('tool_name') for t in native}==names and all(t.get('native_mcp_event',{}).get('status')=='completed' and not t.get('native_mcp_event',{}).get('error') for t in native))
+    check('Native outputs preserved exactly',all(t.get('output')==t.get('native_mcp_event',{}).get('result',{}).get('structured_content') for t in native))
+    check('Executed smoke prompt recorded',bool(evidence.get('request_prompt')) and all(t.get('prompt_asked_to_coder')==evidence.get('request_prompt') for t in native))
+    bytool={t.get('tool_name'):t.get('output',{}) for t in native}
+    matches=False
+    if names.issubset(bytool) and (ROOT/'data/campus_customs_new.db').exists():
+        with sqlite3.connect(ROOT/'data/campus_customs_new.db') as db:
+            matches=(bytool['get_ticket'].get('ticket',{}).get('status')==db.execute('select status from tickets where id=101').fetchone()[0]
+                and bytool['get_inventory'].get('items',[{}])[0].get('qty')==db.execute("select qty from inventory where sku='CC-HOOD-NAVY' and size='M'").fetchone()[0]
+                and bytool['get_financial_context'].get('checking',{}).get('balance')==db.execute("select balance from cash_accounts where name='checking'").fetchone()[0])
+    check('Native MCP evidence matches final database',matches)
 page=ROOT/'output/desk_tickets.html'
 if page.exists():
     text=page.read_text()
@@ -59,7 +78,11 @@ if audit.exists():
 url=ROOT/'output/github_url.txt'
 if url.exists(): check('Published repository URL',bool(re.fullmatch(r'https://github\.com/[^/\s]+/[^/\s]+',url.read_text().strip())))
 failures=[c for c in checks if not c['passed']]
-report={'passed':not failures,'checks':checks,'failures':len(failures)}
+report={'passed':not failures,'scope':'Artifact, database and recorded connection checks; passing does not establish personal prompt history or Canvas submission.',
+    'manual_requirements':{'problem_1':'44 prepared prompts retained with user confirmation; literal per-problem student-typed history is unavailable.',
+        'problem_10':'Evidence-based reflection is prepared for student review and adoption.',
+        'problem_11':'Public repository and URL file verified; Canvas submission remains pending.'},
+    'checks':checks,'failures':len(failures)}
 (ROOT/'output/validation.json').write_text(json.dumps(report,indent=2)+'\n')
 for c in failures: print('OUTSTANDING:',c['check'],c['detail'])
 print(f'{len(checks)-len(failures)}/{len(checks)} checks passed')

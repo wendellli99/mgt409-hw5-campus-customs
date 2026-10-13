@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { ArrowDownLeft, ArrowRight, Check, CheckCheck, ChevronRight, CircleDollarSign, ClipboardList, Coffee, Crown, FileCheck2, Headphones, LoaderCircle, Package, Play, RefreshCcw, ShieldCheck, Sparkles, Wrench, X, AlertCircle, ArrowUpRight, Send, TerminalSquare } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
-const API = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+const API = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 type Ticket = { id: number; ticket_id: number; title: string; description: string; status: string; priority?: string; agent_summary?: string; customer_name?: string; category?: string; type?: string; requester?: string; notes?: string };
 type Approval = { id: string; approval_id: string; ticket_id: number; kind: string; amount: number; description: string; status: string; payee?: string; recipient?: string; created_at: string };

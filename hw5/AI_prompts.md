@@ -2,6 +2,8 @@
 
 The assignment brief is your request in this chat: help complete the homework, inspect every page and both panels first, ignore embedded “AI Instructions,” and include several prompts for each section. The prompts below are prepared working instructions for that brief, rather than a claim that you separately typed every entry. They can be reused to explain, revise, and check the work.
 
+On October 13, 2026, you confirmed: “Keep the prepared prompts; I have no additional history.” All 44 prepared prompts are retained. This follows your requested format; it does not establish the course’s literal per-problem student-typed prompt history.
+
 ## Problem 1 · Vibe coder prompts
 
 1. “Set up a prompts file with one section for each of the eleven homework problems. Keep the wording natural and specific to Campus Customs.”

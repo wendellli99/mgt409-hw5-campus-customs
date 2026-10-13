@@ -52,3 +52,7 @@ python -m pytest tests/test_shop.py -q
 ```
 
 Tests operate on temporary database copies and do not execute payments in the homework's working database.
+
+## Coding-assistant query metadata
+
+The seven query tools (get_ticket, get_inventory, get_financial_context, list_tickets, get_shop_snapshot, get_vendor_status, list_approvals) declare accurate read-only, non-destructive, local-only MCP annotations. The six tools that change persisted state are not marked read-only. A fresh Codex CLI session called all three initial query tools natively during the final review; exact request and unmodified outputs are preserved in `../output/mcp_smoke.json`.

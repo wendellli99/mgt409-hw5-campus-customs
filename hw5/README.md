@@ -32,7 +32,7 @@ source .venv/bin/activate
 python mcp_server/server.py
 ```
 
-MCP listens at `http://127.0.0.1:8001/mcp`. `.mcp.json` contains a project connection for compatible editors, and `.codex/config.toml` contains the Codex project connection. Open/trust this project and reload the editor’s MCP list if needed. Saved connection files and protocol smoke evidence are separate from proof that a particular pre-existing editor session loaded the tools.
+MCP listens at `http://127.0.0.1:8001/mcp`. `.mcp.json` contains a project connection for compatible editors, and `.codex/config.toml` contains the Codex project connection. Open/trust this project and reload the editor’s MCP list if needed. A fresh Codex CLI session successfully called all three initial tools through native MCP during the final review. `output/mcp_smoke.json` preserves the exact executed request, native call events, and database-matching results, plus the earlier protocol smoke. Query tools declare accurate read-only metadata; payment execution and reset remain protected human actions.
 
 In a second terminal at `hw5/`:
 
@@ -82,4 +82,10 @@ Money and reset tests use temporary database copies. The strict validator checks
 
 ## Publication
 
-The homework is published in the **[public GitHub repository](https://github.com/wendellli99/mgt409-hw5-campus-customs)**. Both databases are included, and the verified repository URL is saved in `output/github_url.txt`. An anonymous clone matched the reviewed local file tree. The strict package validator passes all 42 checks. Canvas submission has not been authorized or performed; submit the repository URL there to complete that separate course step.
+The homework is published in the **[public GitHub repository](https://github.com/wendellli99/mgt409-hw5-campus-customs)**. Both databases are included, and the verified repository URL is saved in `output/github_url.txt`. An anonymous clone matched the reviewed local file tree. The strict package validator passes all 48 artifact and connection checks. Canvas submission has not been authorized or performed; submit the repository URL there to complete that separate course step.
+
+## Final review limits
+
+The full source review covered all eleven pages and both panels where present. The final shop/backend suite passes 22 tests, and the frontend production build passes. All 20 directed agent pairs are supported, with direct self-delegation blocked and shared limits plus depth three bounding cycles. Recorded ticket runs and their Expected/Actual evidence predate this final compatibility update and remain preserved. No ticket was rerun and no shop data changed during the final review.
+
+Problem 1 literally asks for prompts the student typed per problem. The user confirmed there is no additional history and asked to retain the 44 prepared prompts; they remain labeled honestly. Passing artifact checks does not remove this limitation. The evidence-based Reflection is ready for student review and adoption. Canvas submission remains separate.

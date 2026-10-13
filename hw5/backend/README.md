@@ -8,7 +8,7 @@ uvicorn main:app --reload --port 8000
 
 The separate MCP service must be listening at `http://127.0.0.1:8001/mcp`. The browser desk uses `http://localhost:8000`; both local Vite origins on port 5173 are allowed.
 
-All five roles in `agents.py` use PydanticAI and `gpt-6-luna` through the course Portkey Responses endpoint. Each role has a prompt in `prompts/` and can delegate to any other teammate. Limits are shared by the entire ticket, including nested delegation: 32 model requests, 75,000 total tokens, 60 tool calls, maximum three delegation edges, no circular delegation. MCP calls time out after 20 seconds; model requests after 60 seconds; complete ticket runs after 600 seconds. A stopped run preserves its evidence and remains open for review/retry.
+All five roles in `agents.py` use PydanticAI and `gpt-6-luna` through the course Portkey Responses endpoint. Each role has a prompt in `prompts/` and can delegate to any other teammate. Limits are shared by the entire ticket, including nested delegation: 32 model requests, 75,000 total tokens, 60 tool calls, maximum three delegation edges, and no direct self-delegation. Every one of the 20 directed role-to-role pairs is available, including a specialist handing work back to Boss; repeated roles and cycles are bounded by depth and the shared limits. MCP calls time out after 20 seconds; model requests after 60 seconds; complete ticket runs after 600 seconds. A stopped run preserves its evidence and remains open for review/retry.
 
 Private `.env` configuration is read from the assignment root, with the coursework workspace `.env` as a local convenience fallback. Required keys: `PORTKEY_API_KEY` and `HUMAN_APPROVAL_TOKEN`; optional `MCP_URL`. The approval credential never enters an agent tool schema or model prompt. Shop facts and actions use MCP exclusively; this backend has no database connection.
 
@@ -21,3 +21,5 @@ python -m unittest discover -s backend/tests -v
 ```
 
 Tests use isolated files and fake shop actions. They do not approve payments in the working database.
+
+The recorded ticket runs and their audit evidence precede the final connectivity compatibility update. That update changes the browser API default to `http://localhost:8000` and permits bounded return delegations; it was verified with offline tests and a frontend build. No ticket was rerun and no payment or database state was changed for this update.

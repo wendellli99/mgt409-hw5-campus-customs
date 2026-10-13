@@ -1,8 +1,13 @@
 {
-  "tested_at": "2026-10-13T19:38:46.742613+00:00",
+  "tested_at": "2026-10-13T20:22:19.489012+00:00",
+  "vibe_coder": "Codex CLI 0.162.1",
+  "native_session_id": "01a136ec-b931-7aa0-a9e3-9835fbc3f88d",
   "transport": "streamable-http",
   "url": "http://127.0.0.1:8001/mcp",
-  "prompt_note": "Prompts are prepared test requests used for this protocol smoke run, not a claimed transcript of human messages.",
+  "prompt_note": "This exact request was sent by the assistant to a fresh connected Codex CLI session while carrying out the user-authorized final review. It is an executed verification prompt, not a claim that the student personally typed it. Native MCP outputs below are taken directly from successful tool-call events; the original pre-run protocol smoke is preserved separately.",
+  "request_prompt": "Test the Campus Customs MCP connection using only native MCP calls. Do not run shell commands or read local files. Do not mutate the shop, approve payments, reset, delegate, or rerun tickets. Call get_ticket(ticket_id=101), get_inventory(sku=\"CC-HOOD-NAVY\", size=\"M\"), and get_financial_context(ticket_id=102) through the configured campus-customs MCP server. Return JSON with one entry for each call containing the tool name, arguments, and complete unmodified tool output. This is a read-only connection smoke check of the already-resolved homework database.",
+  "database_state": "Final resolved database; this read-only test did not reset or modify shop data.",
+  "database_sha256": "702e6483665c6c6d9c18b6d80fcccefcc65ee81df3997da87554f8cc814127a2",
   "available_tools": [
     "get_ticket",
     "get_inventory",
@@ -20,7 +25,7 @@
   ],
   "tests": [
     {
-      "prepared_test_prompt": "Look up ticket 101 and show the customer request, linked invoice, and current status.",
+      "prompt_asked_to_coder": "Test the Campus Customs MCP connection using only native MCP calls. Do not run shell commands or read local files. Do not mutate the shop, approve payments, reset, delegate, or rerun tickets. Call get_ticket(ticket_id=101), get_inventory(sku=\"CC-HOOD-NAVY\", size=\"M\"), and get_financial_context(ticket_id=102) through the configured campus-customs MCP server. Return JSON with one entry for each call containing the tool name, arguments, and complete unmodified tool output. This is a read-only connection smoke check of the already-resolved homework database.",
       "tool_name": "get_ticket",
       "arguments": {
         "ticket_id": 101
@@ -37,19 +42,145 @@
           "qty": 1,
           "lease_id": null,
           "invoice_id": 501,
-          "status": "open",
+          "status": "resolved",
           "notes": "Needs a tee in size S.",
           "created_at": "2026-08-31T09:15:00-04:00"
         },
-        "drafts": [],
-        "outcome": null,
-        "restock": null,
-        "approvals": []
+        "drafts": [
+          {
+            "id": 2,
+            "ticket_id": 101,
+            "message": "Hi Tauhid, the size S Bulldog tee is currently out of stock. The reprint invoice has been paid and the supplier is unblocked. We\u2019ve scheduled an internal follow-up; the supplier\u2019s estimated lead time is five days, with an estimated arrival of September 5. This is only an estimate\u2014the supplier has not confirmed quantity or shipment, and our on-hand stock remains zero until the items physically arrive. We\u2019ll update you when we have confirmation.",
+            "created_at": "2026-10-13T19:51:09+00:00"
+          }
+        ],
+        "outcome": {
+          "ticket_id": 101,
+          "outcome": "Invoice 501 for the size S Bulldog tee reprint has been paid and the vendor is unblocked. Internal follow-up is scheduled with a five-day lead-time estimate (estimated arrival September 5), but supplier confirmation, shipment, confirmed quantity, and physical receipt remain pending; on-hand stock is still zero. Customer draft saved locally and not sent. Follow up when supplier confirms and update stock only after physical receipt.",
+          "resolved_at": "2026-10-13T19:51:20+00:00"
+        },
+        "restock": {
+          "id": 1,
+          "ticket_id": 101,
+          "sku": "CC-TEE-WHITE",
+          "size": "S",
+          "vendor_id": 1,
+          "source_invoice_id": 501,
+          "requested_qty": 1,
+          "confirmed_qty": null,
+          "scheduled_date": "2026-08-31",
+          "estimated_arrival": "2026-09-05",
+          "status": "scheduled_follow_up",
+          "note": "Internal follow-up on the paid reprint invoice. Lead-time estimate only; vendor confirmation, quantity, shipment, and physical receipt remain pending. Inventory is unchanged."
+        },
+        "approvals": [
+          {
+            "id": "1455f4db16035d7a9cad3590",
+            "ticket_id": 101,
+            "kind": "invoice",
+            "ref_id": 501,
+            "amount": 840.0,
+            "sku": null,
+            "size": null,
+            "qty": null,
+            "vendor_id": 1,
+            "status": "approved",
+            "created_at": "2026-10-13T19:45:13+00:00",
+            "approved_by": "Wendell",
+            "approved_at": "2026-10-13T19:50:47+00:00",
+            "payment_id": 1,
+            "description": "Invoice 501: Rush reprint CC-TEE-WHITE S",
+            "payee": "Bulldog Print Co"
+          }
+        ]
       },
-      "mcp_is_error": false
+      "mcp_is_error": false,
+      "native_mcp_event": {
+        "id": "item_1",
+        "type": "mcp_tool_call",
+        "server": "campus-customs",
+        "tool": "get_ticket",
+        "arguments": {
+          "ticket_id": 101
+        },
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"ok\":true,\"ticket\":{\"id\":101,\"type\":\"customer_order\",\"requester\":\"Tauhid Zaman\",\"subject\":\"Bulldog tee\",\"sku\":\"CC-TEE-WHITE\",\"size\":\"S\",\"qty\":1,\"lease_id\":null,\"invoice_id\":501,\"status\":\"resolved\",\"notes\":\"Needs a tee in size S.\",\"created_at\":\"2026-08-31T09:15:00-04:00\"},\"drafts\":[{\"id\":2,\"ticket_id\":101,\"message\":\"Hi Tauhid, the size S Bulldog tee is currently out of stock. The reprint invoice has been paid and the supplier is unblocked. We\u2019ve scheduled an internal follow-up; the supplier\u2019s estimated lead time is five days, with an estimated arrival of September 5. This is only an estimate\u2014the supplier has not confirmed quantity or shipment, and our on-hand stock remains zero until the items physically arrive. We\u2019ll update you when we have confirmation.\",\"created_at\":\"2026-10-13T19:51:09+00:00\"}],\"outcome\":{\"ticket_id\":101,\"outcome\":\"Invoice 501 for the size S Bulldog tee reprint has been paid and the vendor is unblocked. Internal follow-up is scheduled with a five-day lead-time estimate (estimated arrival September 5), but supplier confirmation, shipment, confirmed quantity, and physical receipt remain pending; on-hand stock is still zero. Customer draft saved locally and not sent. Follow up when supplier confirms and update stock only after physical receipt.\",\"resolved_at\":\"2026-10-13T19:51:20+00:00\"},\"restock\":{\"id\":1,\"ticket_id\":101,\"sku\":\"CC-TEE-WHITE\",\"size\":\"S\",\"vendor_id\":1,\"source_invoice_id\":501,\"requested_qty\":1,\"confirmed_qty\":null,\"scheduled_date\":\"2026-08-31\",\"estimated_arrival\":\"2026-09-05\",\"status\":\"scheduled_follow_up\",\"note\":\"Internal follow-up on the paid reprint invoice. Lead-time estimate only; vendor confirmation, quantity, shipment, and physical receipt remain pending. Inventory is unchanged.\"},\"approvals\":[{\"id\":\"1455f4db16035d7a9cad3590\",\"ticket_id\":101,\"kind\":\"invoice\",\"ref_id\":501,\"amount\":840.0,\"sku\":null,\"size\":null,\"qty\":null,\"vendor_id\":1,\"status\":\"approved\",\"created_at\":\"2026-10-13T19:45:13+00:00\",\"approved_by\":\"Wendell\",\"approved_at\":\"2026-10-13T19:50:47+00:00\",\"payment_id\":1,\"description\":\"Invoice 501: Rush reprint CC-TEE-WHITE S\",\"payee\":\"Bulldog Print Co\"}]}"
+            }
+          ],
+          "structured_content": {
+            "ok": true,
+            "ticket": {
+              "id": 101,
+              "type": "customer_order",
+              "requester": "Tauhid Zaman",
+              "subject": "Bulldog tee",
+              "sku": "CC-TEE-WHITE",
+              "size": "S",
+              "qty": 1,
+              "lease_id": null,
+              "invoice_id": 501,
+              "status": "resolved",
+              "notes": "Needs a tee in size S.",
+              "created_at": "2026-08-31T09:15:00-04:00"
+            },
+            "drafts": [
+              {
+                "id": 2,
+                "ticket_id": 101,
+                "message": "Hi Tauhid, the size S Bulldog tee is currently out of stock. The reprint invoice has been paid and the supplier is unblocked. We\u2019ve scheduled an internal follow-up; the supplier\u2019s estimated lead time is five days, with an estimated arrival of September 5. This is only an estimate\u2014the supplier has not confirmed quantity or shipment, and our on-hand stock remains zero until the items physically arrive. We\u2019ll update you when we have confirmation.",
+                "created_at": "2026-10-13T19:51:09+00:00"
+              }
+            ],
+            "outcome": {
+              "ticket_id": 101,
+              "outcome": "Invoice 501 for the size S Bulldog tee reprint has been paid and the vendor is unblocked. Internal follow-up is scheduled with a five-day lead-time estimate (estimated arrival September 5), but supplier confirmation, shipment, confirmed quantity, and physical receipt remain pending; on-hand stock is still zero. Customer draft saved locally and not sent. Follow up when supplier confirms and update stock only after physical receipt.",
+              "resolved_at": "2026-10-13T19:51:20+00:00"
+            },
+            "restock": {
+              "id": 1,
+              "ticket_id": 101,
+              "sku": "CC-TEE-WHITE",
+              "size": "S",
+              "vendor_id": 1,
+              "source_invoice_id": 501,
+              "requested_qty": 1,
+              "confirmed_qty": null,
+              "scheduled_date": "2026-08-31",
+              "estimated_arrival": "2026-09-05",
+              "status": "scheduled_follow_up",
+              "note": "Internal follow-up on the paid reprint invoice. Lead-time estimate only; vendor confirmation, quantity, shipment, and physical receipt remain pending. Inventory is unchanged."
+            },
+            "approvals": [
+              {
+                "id": "1455f4db16035d7a9cad3590",
+                "ticket_id": 101,
+                "kind": "invoice",
+                "ref_id": 501,
+                "amount": 840.0,
+                "sku": null,
+                "size": null,
+                "qty": null,
+                "vendor_id": 1,
+                "status": "approved",
+                "created_at": "2026-10-13T19:45:13+00:00",
+                "approved_by": "Wendell",
+                "approved_at": "2026-10-13T19:50:47+00:00",
+                "payment_id": 1,
+                "description": "Invoice 501: Rush reprint CC-TEE-WHITE S",
+                "payee": "Bulldog Print Co"
+              }
+            ]
+          }
+        },
+        "error": null,
+        "status": "completed"
+      }
     },
     {
-      "prepared_test_prompt": "Check the real inventory and unit costs for medium navy Yale hoodies before promising the AI Club 20 units.",
+      "prompt_asked_to_coder": "Test the Campus Customs MCP connection using only native MCP calls. Do not run shell commands or read local files. Do not mutate the shop, approve payments, reset, delegate, or rerun tickets. Call get_ticket(ticket_id=101), get_inventory(sku=\"CC-HOOD-NAVY\", size=\"M\"), and get_financial_context(ticket_id=102) through the configured campus-customs MCP server. Return JSON with one entry for each call containing the tool name, arguments, and complete unmodified tool output. This is a read-only connection smoke check of the already-resolved homework database.",
       "tool_name": "get_inventory",
       "arguments": {
         "sku": "CC-HOOD-NAVY",
@@ -69,10 +200,44 @@
           }
         ]
       },
-      "mcp_is_error": false
+      "mcp_is_error": false,
+      "native_mcp_event": {
+        "id": "item_2",
+        "type": "mcp_tool_call",
+        "server": "campus-customs",
+        "tool": "get_inventory",
+        "arguments": {
+          "sku": "CC-HOOD-NAVY",
+          "size": "M"
+        },
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"ok\":true,\"items\":[{\"sku\":\"CC-HOOD-NAVY\",\"name\":\"Basic Hoodie Big Yale\",\"size\":\"M\",\"qty\":8,\"location\":\"Aisle A\",\"unit_cost\":22.0,\"list_price\":58.0}]}"
+            }
+          ],
+          "structured_content": {
+            "ok": true,
+            "items": [
+              {
+                "sku": "CC-HOOD-NAVY",
+                "name": "Basic Hoodie Big Yale",
+                "size": "M",
+                "qty": 8,
+                "location": "Aisle A",
+                "unit_cost": 22.0,
+                "list_price": 58.0
+              }
+            ]
+          }
+        },
+        "error": null,
+        "status": "completed"
+      }
     },
     {
-      "prepared_test_prompt": "Inspect the shop date, checking balance, unpaid vendor invoice, and next rent obligation for ticket 102.",
+      "prompt_asked_to_coder": "Test the Campus Customs MCP connection using only native MCP calls. Do not run shell commands or read local files. Do not mutate the shop, approve payments, reset, delegate, or rerun tickets. Call get_ticket(ticket_id=101), get_inventory(sku=\"CC-HOOD-NAVY\", size=\"M\"), and get_financial_context(ticket_id=102) through the configured campus-customs MCP server. Return JSON with one entry for each call containing the tool name, arguments, and complete unmodified tool output. This is a read-only connection smoke check of the already-resolved homework database.",
       "tool_name": "get_financial_context",
       "arguments": {
         "ticket_id": 102
@@ -89,14 +254,14 @@
           "qty": null,
           "lease_id": 1,
           "invoice_id": null,
-          "status": "open",
+          "status": "resolved",
           "notes": "Email: shop rent due in 2 days.",
           "created_at": "2026-08-31T11:05:00-04:00"
         },
         "desk_date": "2026-08-31",
         "checking": {
           "name": "checking",
-          "balance": 3400.0,
+          "balance": 160.0,
           "date": "2026-08-31"
         },
         "invoices": [
@@ -105,10 +270,10 @@
             "vendor_id": 1,
             "amount": 840.0,
             "due_date": "2026-08-28",
-            "status": "open",
+            "status": "paid",
             "description": "Rush reprint CC-TEE-WHITE S",
             "vendor_name": "Bulldog Print Co",
-            "overdue": true
+            "overdue": false
           }
         ],
         "vendors": [
@@ -117,8 +282,8 @@
             "name": "Bulldog Print Co",
             "specialty": "apparel reprint",
             "lead_days": 5,
-            "blocked": true,
-            "open_invoice_total": 840.0
+            "blocked": false,
+            "open_invoice_total": 0.0
           },
           {
             "id": 2,
@@ -143,15 +308,313 @@
             "space_name": "Chapel Street shop",
             "landlord": "Elm City Properties",
             "monthly_rent": 2400.0,
-            "next_due": "2026-09-02",
+            "next_due": "2026-10-02",
             "notes": null,
-            "due_in_days": 2
+            "due_in_days": 32
           }
         ],
-        "payments": [],
+        "payments": [
+          {
+            "id": 1,
+            "kind": "invoice",
+            "ref_id": 501,
+            "amount": 840.0,
+            "account": "checking",
+            "paid_at": "2026-08-31",
+            "approved_by": "Wendell"
+          },
+          {
+            "id": 2,
+            "kind": "rent",
+            "ref_id": 1,
+            "amount": 2400.0,
+            "account": "checking",
+            "paid_at": "2026-08-31",
+            "approved_by": "Wendell"
+          }
+        ],
         "available_for_purchase": 160.0
       },
-      "mcp_is_error": false
+      "mcp_is_error": false,
+      "native_mcp_event": {
+        "id": "item_3",
+        "type": "mcp_tool_call",
+        "server": "campus-customs",
+        "tool": "get_financial_context",
+        "arguments": {
+          "ticket_id": 102
+        },
+        "result": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"ok\":true,\"ticket\":{\"id\":102,\"type\":\"rent_notice\",\"requester\":\"Elm City Properties\",\"subject\":\"Rent due\",\"sku\":null,\"size\":null,\"qty\":null,\"lease_id\":1,\"invoice_id\":null,\"status\":\"resolved\",\"notes\":\"Email: shop rent due in 2 days.\",\"created_at\":\"2026-08-31T11:05:00-04:00\"},\"desk_date\":\"2026-08-31\",\"checking\":{\"name\":\"checking\",\"balance\":160.0,\"date\":\"2026-08-31\"},\"invoices\":[{\"id\":501,\"vendor_id\":1,\"amount\":840.0,\"due_date\":\"2026-08-28\",\"status\":\"paid\",\"description\":\"Rush reprint CC-TEE-WHITE S\",\"vendor_name\":\"Bulldog Print Co\",\"overdue\":false}],\"vendors\":[{\"id\":1,\"name\":\"Bulldog Print Co\",\"specialty\":\"apparel reprint\",\"lead_days\":5,\"blocked\":false,\"open_invoice_total\":0.0},{\"id\":2,\"name\":\"Elm City Gifts\",\"specialty\":\"mugs and small goods\",\"lead_days\":3,\"blocked\":false,\"open_invoice_total\":0.0},{\"id\":3,\"name\":\"QuickShip CT\",\"specialty\":\"local courier\",\"lead_days\":1,\"blocked\":false,\"open_invoice_total\":0.0}],\"leases\":[{\"id\":1,\"space_name\":\"Chapel Street shop\",\"landlord\":\"Elm City Properties\",\"monthly_rent\":2400.0,\"next_due\":\"2026-10-02\",\"notes\":null,\"due_in_days\":32}],\"payments\":[{\"id\":1,\"kind\":\"invoice\",\"ref_id\":501,\"amount\":840.0,\"account\":\"checking\",\"paid_at\":\"2026-08-31\",\"approved_by\":\"Wendell\"},{\"id\":2,\"kind\":\"rent\",\"ref_id\":1,\"amount\":2400.0,\"account\":\"checking\",\"paid_at\":\"2026-08-31\",\"approved_by\":\"Wendell\"}],\"available_for_purchase\":160.0}"
+            }
+          ],
+          "structured_content": {
+            "ok": true,
+            "ticket": {
+              "id": 102,
+              "type": "rent_notice",
+              "requester": "Elm City Properties",
+              "subject": "Rent due",
+              "sku": null,
+              "size": null,
+              "qty": null,
+              "lease_id": 1,
+              "invoice_id": null,
+              "status": "resolved",
+              "notes": "Email: shop rent due in 2 days.",
+              "created_at": "2026-08-31T11:05:00-04:00"
+            },
+            "desk_date": "2026-08-31",
+            "checking": {
+              "name": "checking",
+              "balance": 160.0,
+              "date": "2026-08-31"
+            },
+            "invoices": [
+              {
+                "id": 501,
+                "vendor_id": 1,
+                "amount": 840.0,
+                "due_date": "2026-08-28",
+                "status": "paid",
+                "description": "Rush reprint CC-TEE-WHITE S",
+                "vendor_name": "Bulldog Print Co",
+                "overdue": false
+              }
+            ],
+            "vendors": [
+              {
+                "id": 1,
+                "name": "Bulldog Print Co",
+                "specialty": "apparel reprint",
+                "lead_days": 5,
+                "blocked": false,
+                "open_invoice_total": 0.0
+              },
+              {
+                "id": 2,
+                "name": "Elm City Gifts",
+                "specialty": "mugs and small goods",
+                "lead_days": 3,
+                "blocked": false,
+                "open_invoice_total": 0.0
+              },
+              {
+                "id": 3,
+                "name": "QuickShip CT",
+                "specialty": "local courier",
+                "lead_days": 1,
+                "blocked": false,
+                "open_invoice_total": 0.0
+              }
+            ],
+            "leases": [
+              {
+                "id": 1,
+                "space_name": "Chapel Street shop",
+                "landlord": "Elm City Properties",
+                "monthly_rent": 2400.0,
+                "next_due": "2026-10-02",
+                "notes": null,
+                "due_in_days": 32
+              }
+            ],
+            "payments": [
+              {
+                "id": 1,
+                "kind": "invoice",
+                "ref_id": 501,
+                "amount": 840.0,
+                "account": "checking",
+                "paid_at": "2026-08-31",
+                "approved_by": "Wendell"
+              },
+              {
+                "id": 2,
+                "kind": "rent",
+                "ref_id": 1,
+                "amount": 2400.0,
+                "account": "checking",
+                "paid_at": "2026-08-31",
+                "approved_by": "Wendell"
+              }
+            ],
+            "available_for_purchase": 160.0
+          }
+        },
+        "error": null,
+        "status": "completed"
+      }
     }
-  ]
+  ],
+  "initial_protocol_smoke": {
+    "tested_at": "2026-10-13T19:38:46.742613+00:00",
+    "transport": "streamable-http",
+    "url": "http://127.0.0.1:8001/mcp",
+    "prompt_note": "Prompts are prepared test requests used for this protocol smoke run, not a claimed transcript of human messages.",
+    "available_tools": [
+      "get_ticket",
+      "get_inventory",
+      "get_financial_context",
+      "list_tickets",
+      "get_shop_snapshot",
+      "get_vendor_status",
+      "prepare_payment",
+      "list_approvals",
+      "approve_payment",
+      "schedule_restock",
+      "draft_message",
+      "resolve_ticket",
+      "reset_database"
+    ],
+    "tests": [
+      {
+        "prepared_test_prompt": "Look up ticket 101 and show the customer request, linked invoice, and current status.",
+        "tool_name": "get_ticket",
+        "arguments": {
+          "ticket_id": 101
+        },
+        "output": {
+          "ok": true,
+          "ticket": {
+            "id": 101,
+            "type": "customer_order",
+            "requester": "Tauhid Zaman",
+            "subject": "Bulldog tee",
+            "sku": "CC-TEE-WHITE",
+            "size": "S",
+            "qty": 1,
+            "lease_id": null,
+            "invoice_id": 501,
+            "status": "open",
+            "notes": "Needs a tee in size S.",
+            "created_at": "2026-08-31T09:15:00-04:00"
+          },
+          "drafts": [],
+          "outcome": null,
+          "restock": null,
+          "approvals": []
+        },
+        "mcp_is_error": false
+      },
+      {
+        "prepared_test_prompt": "Check the real inventory and unit costs for medium navy Yale hoodies before promising the AI Club 20 units.",
+        "tool_name": "get_inventory",
+        "arguments": {
+          "sku": "CC-HOOD-NAVY",
+          "size": "M"
+        },
+        "output": {
+          "ok": true,
+          "items": [
+            {
+              "sku": "CC-HOOD-NAVY",
+              "name": "Basic Hoodie Big Yale",
+              "size": "M",
+              "qty": 8,
+              "location": "Aisle A",
+              "unit_cost": 22.0,
+              "list_price": 58.0
+            }
+          ]
+        },
+        "mcp_is_error": false
+      },
+      {
+        "prepared_test_prompt": "Inspect the shop date, checking balance, unpaid vendor invoice, and next rent obligation for ticket 102.",
+        "tool_name": "get_financial_context",
+        "arguments": {
+          "ticket_id": 102
+        },
+        "output": {
+          "ok": true,
+          "ticket": {
+            "id": 102,
+            "type": "rent_notice",
+            "requester": "Elm City Properties",
+            "subject": "Rent due",
+            "sku": null,
+            "size": null,
+            "qty": null,
+            "lease_id": 1,
+            "invoice_id": null,
+            "status": "open",
+            "notes": "Email: shop rent due in 2 days.",
+            "created_at": "2026-08-31T11:05:00-04:00"
+          },
+          "desk_date": "2026-08-31",
+          "checking": {
+            "name": "checking",
+            "balance": 3400.0,
+            "date": "2026-08-31"
+          },
+          "invoices": [
+            {
+              "id": 501,
+              "vendor_id": 1,
+              "amount": 840.0,
+              "due_date": "2026-08-28",
+              "status": "open",
+              "description": "Rush reprint CC-TEE-WHITE S",
+              "vendor_name": "Bulldog Print Co",
+              "overdue": true
+            }
+          ],
+          "vendors": [
+            {
+              "id": 1,
+              "name": "Bulldog Print Co",
+              "specialty": "apparel reprint",
+              "lead_days": 5,
+              "blocked": true,
+              "open_invoice_total": 840.0
+            },
+            {
+              "id": 2,
+              "name": "Elm City Gifts",
+              "specialty": "mugs and small goods",
+              "lead_days": 3,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            },
+            {
+              "id": 3,
+              "name": "QuickShip CT",
+              "specialty": "local courier",
+              "lead_days": 1,
+              "blocked": false,
+              "open_invoice_total": 0.0
+            }
+          ],
+          "leases": [
+            {
+              "id": 1,
+              "space_name": "Chapel Street shop",
+              "landlord": "Elm City Properties",
+              "monthly_rent": 2400.0,
+              "next_due": "2026-09-02",
+              "notes": null,
+              "due_in_days": 2
+            }
+          ],
+          "payments": [],
+          "available_for_purchase": 160.0
+        },
+        "mcp_is_error": false
+      }
+    ]
+  },
+  "earlier_native_attempt": {
+    "status": "failed",
+    "reason": "Tools lacked accurate read-only metadata, so Codex required approval unavailable under its never approval policy. Only the seven genuinely read-only tools received read-only annotations; mutators remained protected.",
+    "attempted_tools": [
+      "get_ticket",
+      "get_inventory",
+      "get_financial_context"
+    ],
+    "shop_changes": false
+  }
 }

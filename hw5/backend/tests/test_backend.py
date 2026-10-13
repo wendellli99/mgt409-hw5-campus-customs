@@ -16,9 +16,9 @@ from pydantic_ai import ModelRetry
 from pydantic_ai.models.test import TestModel
 from pydantic_ai.usage import RunUsage
 import main
-from agents import AgentTeam, TeamDeps, LIMITS, SHOP_TOOLS
+from agents import AgentTeam, TeamDeps, LIMITS, SHOP_TOOLS, ROLES
 from audit import append_event, read_events
-from models import RunRecord
+from models import AgentResult, RunRecord
 
 
 class AuditTests(unittest.TestCase):
@@ -52,13 +52,33 @@ class TeamGuardTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(LIMITS.tool_calls_limit, 60)
         self.assertFalse(self.team.tool_allowed(SimpleNamespace(deps=self.deps), SimpleNamespace(name='resolve_ticket')))
 
-    async def test_circular_and_depth_guards_stop_before_any_model_call(self):
+    async def test_self_and_depth_guards_stop_before_any_model_call(self):
         ctx = SimpleNamespace(deps=self.deps)
         with self.assertRaises(ModelRetry):
-            await self.team.delegate(ctx, 'Boss', 'Investigate.')
+            await self.team.delegate(ctx, 'Inventory', 'Investigate.')
         self.deps.path = ('Boss', 'Customer Service', 'Inventory', 'Accounting')
         with self.assertRaises(ModelRetry):
             await self.team.delegate(ctx, 'Facilities', 'Investigate.')
+
+    async def test_all_twenty_directed_role_pairs_and_ancestor_boss_are_allowed(self):
+        observed = []
+        async def mock_run_role(deps, task):
+            observed.append((deps.path[-2], deps.agent, deps.path))
+            return AgentResult(summary='Offline delegation report.')
+        with patch.object(self.team, 'run_role', side_effect=mock_run_role), patch('agents.append_event'):
+            for source in ROLES:
+                for target in ROLES:
+                    if source == target:
+                        continue
+                    deps = TeamDeps('offline', 101, source, (source,), RunUsage(), self.team)
+                    result = await self.team.delegate(SimpleNamespace(deps=deps), target, 'Offline connectivity check.')
+                    self.assertEqual(result.summary, 'Offline delegation report.')
+            # This was previously forbidden solely because Boss appeared earlier in the path.
+            await self.team.delegate(SimpleNamespace(deps=self.deps), 'Boss', 'Offline ancestor handoff.')
+        pairs = {(source, target) for source, target, _ in observed[:20]}
+        self.assertEqual(pairs, {(source, target) for source in ROLES for target in ROLES if source != target})
+        self.assertEqual(len(pairs), 20)
+        self.assertEqual(observed[-1], ('Inventory', 'Boss', ('Boss', 'Inventory', 'Boss')))
 
     async def test_mutation_cannot_target_another_ticket(self):
         with self.assertRaises(ModelRetry):

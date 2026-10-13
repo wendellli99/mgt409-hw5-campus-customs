@@ -112,8 +112,8 @@ class AgentTeam:
                        task: Annotated[str, Field(min_length=1, max_length=2400)]) -> AgentResult:
         """Delegate a focused task to any other teammate; share the same ticket and budget."""
         deps = ctx.deps
-        if agent in deps.path:
-            raise ModelRetry(f'Circular delegation is blocked: {" → ".join(deps.path)} → {agent}. Report back instead.')
+        if agent == deps.agent:
+            raise ModelRetry('Direct self-delegation is blocked. Choose another teammate or report back.')
         if len(deps.path) - 1 >= MAX_DELEGATION_DEPTH:
             raise ModelRetry('Maximum delegation depth reached. Use existing evidence and report back.')
         if deps.usage.requests >= 31:

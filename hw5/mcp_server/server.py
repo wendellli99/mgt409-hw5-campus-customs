@@ -14,37 +14,37 @@ mcp = FastMCP("Campus Customs Shop", instructions="Business facts come from the 
 shop = Shop()
 
 
-@mcp.tool
+@mcp.tool(annotations={"readOnlyHint": True, "destructiveHint": False, "openWorldHint": False})
 def get_ticket(ticket_id: int) -> dict:
     """Read ticket details, saved drafts/outcome/restock, and its approval requests."""
     return safe_call(shop.get_ticket, ticket_id)
 
 
-@mcp.tool
+@mcp.tool(annotations={"readOnlyHint": True, "destructiveHint": False, "openWorldHint": False})
 def get_inventory(sku: str, size: str | None = None) -> dict:
     """Read actual stock and database costs/list prices for a SKU and optional size."""
     return safe_call(shop.get_inventory, sku, size)
 
 
-@mcp.tool
+@mcp.tool(annotations={"readOnlyHint": True, "destructiveHint": False, "openWorldHint": False})
 def get_financial_context(ticket_id: int) -> dict:
     """Read the desk's business date, checking, invoices, vendor blocks, rent and payments."""
     return safe_call(shop.get_financial_context, ticket_id)
 
 
-@mcp.tool
+@mcp.tool(annotations={"readOnlyHint": True, "destructiveHint": False, "openWorldHint": False})
 def list_tickets() -> dict:
     """List all tickets and their open/resolved statuses."""
     return safe_call(shop.list_tickets)
 
 
-@mcp.tool
+@mcp.tool(annotations={"readOnlyHint": True, "destructiveHint": False, "openWorldHint": False})
 def get_shop_snapshot() -> dict:
     """Read persisted desk state for the human dashboard and audit view."""
     return safe_call(shop.get_shop_snapshot)
 
 
-@mcp.tool
+@mcp.tool(annotations={"readOnlyHint": True, "destructiveHint": False, "openWorldHint": False})
 def get_vendor_status(vendor_id: int) -> dict:
     """Read vendor lead time, invoices, and whether unpaid invoices block purchases."""
     return safe_call(shop.get_vendor_status, vendor_id)
@@ -58,7 +58,7 @@ def prepare_payment(ticket_id: int, kind: str, ref_id: int | None = None,
     return safe_call(shop.prepare_payment, ticket_id, kind, ref_id, amount, sku, size, qty)
 
 
-@mcp.tool
+@mcp.tool(annotations={"readOnlyHint": True, "destructiveHint": False, "openWorldHint": False})
 def list_approvals(ticket_id: int | None = None) -> dict:
     """List prepared and approved payment requests; optionally filter by ticket."""
     return safe_call(shop.list_approvals, ticket_id)
